@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "/Users/urjasvisuthar/Desktop/KincProject/Kinc/Sources",
+                "/Users/urjasvisuthar/Desktop/KincProject/Kinc/Backends/System/Apple/Sources",
+                "/Users/urjasvisuthar/Desktop/KincProject/Kinc/Backends/System/macOS/Sources",
+                "/Users/urjasvisuthar/Desktop/KincProject/Kinc/Backends/System/POSIX/Sources",
+                "/Users/urjasvisuthar/Desktop/KincProject/Kinc/Backends/Graphics5/Metal/Sources",
+                "/Users/urjasvisuthar/Desktop/KincProject/Kinc/Backends/Graphics4/G4onG5/Sources"
+            ],
+            "defines": [
+                "KORE_G1",
+                "KORE_G2",
+                "KORE_G3",
+                "KORE_A1",
+                "KORE_A2",
+                "KORE_LZ4X",
+                "KORE_MACOS",
+                "KORE_METAL",
+                "KORE_POSIX",
+                "KORE_G4",
+                "KORE_G5",
+                "KORE_G4ONG5"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ]
+        }
+    ],
+    "version": 4
+}

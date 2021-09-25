@@ -1,0 +1,1315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C21A316-22CF-5D74-8864-F282E9FB494E /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD660FC1-CF47-505A-8D6B-70BF9E79F4E5 /* Metal.framework */; };
+		3AD3DFAB-CC38-50C4-852B-F477AC625E49 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E064B346-CB40-5B37-BF7D-378058D02358 /* MetalKit.framework */; };
+		BBF8BBA9-1F6D-5693-BD54-5EF6A43947B6 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B8FD7E-D5FE-567B-8D56-A88955FE7F79 /* IOKit.framework */; };
+		426BBB40-6116-52B7-803A-7CB947A3799B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2999C92E-95C2-52D7-86EC-5A82A0D424CE /* Cocoa.framework */; };
+		FA243EC5-5420-5C61-9402-746B410404CC /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D22D8E4C-2C88-554B-8C0A-B20AFC8731C6 /* AppKit.framework */; };
+		741C3808-8948-5064-8CFF-25197196BC59 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F803B073-1DD8-55A4-89A4-99C27327D950 /* CoreAudio.framework */; };
+		CED3404B-7117-5B95-BD4E-0136E7CC54A6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BC4ECD-516E-58CD-B05E-2A9B321F5298 /* CoreData.framework */; };
+		68061C70-15B7-5350-81D9-DBB8DD09C5E3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3127646C-3A05-5B82-8267-FDF35F9E4302 /* CoreMedia.framework */; };
+		C20D409A-BCDD-5897-B7AF-DBBCA6692F7E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FCA3F2-1BCF-5FF4-A83F-A41F7BC8D3BF /* CoreVideo.framework */; };
+		5D604C28-C3E4-52C3-9DE2-81E6A1F56EF5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E870F33D-373E-5BF1-AF41-3039A46DD285 /* AVFoundation.framework */; };
+		3688E662-78B9-56C9-980C-0CDFAC75EEF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DC8B1A-57B4-5A7C-AD29-8F65FA0F4AB8 /* Foundation.framework */; };
+		FF0A3AC7-CA62-55BF-A071-CFFB34B7476D /* Deployment in Resources */ = {isa = PBXBuildFile; fileRef = D9FA1022-EDE6-5D88-852F-B54E7CF4A9E6 /* Deployment */; };
+		FFA26A22-DC7C-5230-9969-CA8CFB5F65A3 /* Sources/main.c in Sources */ = {isa = PBXBuildFile; fileRef = 36B259B8-4805-5463-850C-3D9D23FA6DCA /* Sources/main.c */; };
+		DDEA9D93-427A-5515-9CF9-0988219427B8 /* Sources/mat4.c in Sources */ = {isa = PBXBuildFile; fileRef = C80C4729-6A6C-53C2-B063-5AC8677FD6D9 /* Sources/mat4.c */; };
+		062EB246-6BE2-5033-A0AA-DC32F51437A4 /* Sources/meshgenerator.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D7980-61A3-56C1-AC8F-F91F9F0C76F3 /* Sources/meshgenerator.c */; };
+		DEF6A8AA-C9A1-5518-89A7-E15950B34367 /* Sources/quaternion.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B58304-47CA-5CE6-A068-E87134728718 /* Sources/quaternion.c */; };
+		A8BE476E-C5A6-5A96-B6E2-4A4E333D7F2A /* Sources/vector3.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D33433B-8349-57CB-AB93-B79986E6DF6B /* Sources/vector3.c */; };
+		F537135C-66A4-511C-B198-61820E11C11A /* Sources/vector4.c in Sources */ = {isa = PBXBuildFile; fileRef = BC296DF7-10F1-558D-A3C3-289B01646691 /* Sources/vector4.c */; };
+		44343B2B-358B-5BD6-8FA5-61C4BF69DBF6 /* build/Sources/g1.frag.metal in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B1AAC-FBE5-58B0-BF98-41C543BFE767 /* build/Sources/g1.frag.metal */; };
+		FEBB369C-6B84-5773-A1D3-26C4122ADE76 /* build/Sources/g1.vert.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6C80DCB4-08F7-5D84-85DE-486F740FE518 /* build/Sources/g1.vert.metal */; };
+		4C518637-B9BE-525C-B5B8-F5ABC1D505CE /* build/Sources/painter-colored.frag.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7664CD36-A2E8-5359-82EE-D6EE5950DB1E /* build/Sources/painter-colored.frag.metal */; };
+		2C405536-B155-5524-8790-7AD84CFD6B4A /* build/Sources/painter-colored.vert.metal in Sources */ = {isa = PBXBuildFile; fileRef = 572B20F1-B99F-53EB-8B5B-EE2A5BC781F3 /* build/Sources/painter-colored.vert.metal */; };
+		8B46F74F-BC20-5134-BF41-28B8386FCE40 /* build/Sources/painter-image.frag.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8ECA16FA-B6F2-5337-B78C-65B5D35E5336 /* build/Sources/painter-image.frag.metal */; };
+		7199DD63-FA9C-586E-8587-EEB42A5DCB92 /* build/Sources/painter-image.vert.metal in Sources */ = {isa = PBXBuildFile; fileRef = 36CC2CEF-C31E-56A7-AA40-6369876E4DA7 /* build/Sources/painter-image.vert.metal */; };
+		34FE3C0F-F47B-5018-8058-E57D5A486564 /* build/Sources/painter-text.frag.metal in Sources */ = {isa = PBXBuildFile; fileRef = CD6F34F9-922E-5FFA-BE00-5CE76DA2AC72 /* build/Sources/painter-text.frag.metal */; };
+		5B0C5429-AB3C-5E86-A50F-1BD5C71E1129 /* build/Sources/painter-text.vert.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5997484D-9DE1-502A-B878-B8ADE5C3459A /* build/Sources/painter-text.vert.metal */; };
+		9D7AE6DB-91F1-5E53-BB6D-654947CE1884 /* build/Sources/painter-video.frag.metal in Sources */ = {isa = PBXBuildFile; fileRef = F3D09BB1-C6A3-52EE-A7CE-B092BFADD857 /* build/Sources/painter-video.frag.metal */; };
+		85D2C915-C389-5FFD-A1C7-EBDEF3EFFA45 /* build/Sources/painter-video.vert.metal in Sources */ = {isa = PBXBuildFile; fileRef = D9A1FD32-60C1-5E1F-AEE2-1789E6F99C5A /* build/Sources/painter-video.vert.metal */; };
+		AA507646-D3F9-5F59-9504-0DF8019CDD56 /* build/Sources/shade.frag.metal in Sources */ = {isa = PBXBuildFile; fileRef = C9CFF715-4F05-5967-AB8E-EFA1D9BC9764 /* build/Sources/shade.frag.metal */; };
+		F0AB12AA-B63B-59E8-B381-46C9606A3BC5 /* build/Sources/shade.vert.metal in Sources */ = {isa = PBXBuildFile; fileRef = 42E81733-FAB9-525A-9652-4E5F0952CFDE /* build/Sources/shade.vert.metal */; };
+		B6DD8B2B-A6F4-5E6B-A4CD-FED459B61CE8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/g4ong5unit.c in Sources */ = {isa = PBXBuildFile; fileRef = 7EE6E734-0875-5577-83A3-B8DA5E1BF767 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/g4ong5unit.c */; };
+		55618013-E487-5A01-AB1A-BDAB3455074A /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/compute.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A83D62F-A79C-5312-81DF-6611FCD4505B /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/compute.m */; };
+		E77A262D-BDA5-5126-AE66-25318543590F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/metalunit.m in Sources */ = {isa = PBXBuildFile; fileRef = 715CC507-3515-589D-88A1-B3BFC2F0855E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/metalunit.m */; };
+		D1740AF3-3755-59A6-8936-E209C5A4AC05 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/appleunit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F873C07-6CB3-57E8-9A20-61D05AE8455D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/appleunit.m */; };
+		D023A16C-8AE2-5254-8F05-83F63405053A /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/posixunit.c in Sources */ = {isa = PBXBuildFile; fileRef = ACDA02C9-DA52-59DD-9DD0-F2EDB5149F22 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/posixunit.c */; };
+		4C0DDC9D-AEEB-5B15-88CC-42B38C8AA5B5 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/macosunit.m in Sources */ = {isa = PBXBuildFile; fileRef = 830ADE28-227E-5793-A596-FC561EE4654F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/macosunit.m */; };
+		F3D46696-67D2-57E1-AD9C-7C6051D7B9E9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/rootunit.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE9584-2410-58AA-AA12-EC806C47B452 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/rootunit.c */; };
+		7A7E73EA-92B1-5E90-B0A9-1FD7E0043B7B /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/a1unit.c in Sources */ = {isa = PBXBuildFile; fileRef = B4E82CBA-CA4B-5779-A57A-1EC46B75B4AE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/a1unit.c */; };
+		061B9DBB-49BE-5C05-8885-9F1CC8F2F60C /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/stb_vorbis.c in Sources */ = {isa = PBXBuildFile; fileRef = 593A9493-163F-5BF1-92A8-A8DA66CE1F46 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/stb_vorbis.c */; };
+		DFB216DE-6CC8-5C49-AE53-17930F60CCD4 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio2/audio.c in Sources */ = {isa = PBXBuildFile; fileRef = FD9F443A-23BB-5C40-8F95-C1DEF5F7CB4D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio2/audio.c */; };
+		4CB58D2B-DB79-572F-BB4B-83F8C8878B46 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics1/graphics.c in Sources */ = {isa = PBXBuildFile; fileRef = FB8F2FF4-58E7-5E9D-B803-D1516CE9803D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics1/graphics.c */; };
+		A5B003F6-C0C8-55BB-B7E1-42C964A6F1D7 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics_kore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68221B85-4715-5463-B4A3-48F8EBA37AB3 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics_kore.cpp */; };
+		8D0158D4-21EE-54E0-9B54-06F47BC2FDC2 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics_soft.c in Sources */ = {isa = PBXBuildFile; fileRef = 912553F3-E642-5B90-A87A-8F29028F6159 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics_soft.c */; };
+		6226F263-C04E-5CD7-8873-CE93A95EB9B7 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/g4unit.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A93BB-1DAD-5344-BC44-D42C737878A8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/g4unit.c */; };
+		B20CF319-7D36-5F55-AB37-F8542E33EF09 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/g5unit.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A96BD0E-DCB1-5D4F-9057-45FBBE8EDE49 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/g5unit.c */; };
+		51C78444-C08C-545C-9682-D881678094C3 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/inputunit.c in Sources */ = {isa = PBXBuildFile; fileRef = AFE41486-AFD4-5E24-9112-BEA308DAE107 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/inputunit.c */; };
+		A7F663A8-B338-5A70-9A8D-21EB42AD53FF /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/iounit.c in Sources */ = {isa = PBXBuildFile; fileRef = B6C009BD-0101-5CCD-800C-89A2B0B424D5 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/iounit.c */; };
+		2CDB8C3B-3307-5FE8-B138-5D1D1AD1DFEC /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/mathunit.c in Sources */ = {isa = PBXBuildFile; fileRef = FC100BE3-0E67-5F5A-839D-A5EF84714256 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/mathunit.c */; };
+		31625BAF-3FF9-55F9-A743-55DDF668327D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/networkunit.c in Sources */ = {isa = PBXBuildFile; fileRef = 75EC7F67-A9A8-5D68-9DED-84EC72B9A29C /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/networkunit.c */; };
+		98C43931-F138-5B36-8EA4-6666DED310F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B762EAB4-B440-54B0-AF11-18D57AD97A7F /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9137F3A1-B0FE-5708-A1F3-16C8BFD9A802 /* New-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD660FC1-CF47-505A-8D6B-70BF9E79F4E5 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		E064B346-CB40-5B37-BF7D-378058D02358 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		26B8FD7E-D5FE-567B-8D56-A88955FE7F79 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		2999C92E-95C2-52D7-86EC-5A82A0D424CE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D22D8E4C-2C88-554B-8C0A-B20AFC8731C6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F803B073-1DD8-55A4-89A4-99C27327D950 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		A6BC4ECD-516E-58CD-B05E-2A9B321F5298 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3127646C-3A05-5B82-8267-FDF35F9E4302 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		45FCA3F2-1BCF-5FF4-A83F-A41F7BC8D3BF /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		E870F33D-373E-5BF1-AF41-3039A46DD285 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		80DC8B1A-57B4-5A7C-AD29-8F65FA0F4AB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D9FA1022-EDE6-5D88-852F-B54E7CF4A9E6 /* Deployment */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Deployment; path = "/Users/urjasvisuthar/Desktop/KincProject/Deployment"; sourceTree = "<group>"; };
+		6F138DC6-18B1-5079-9F8C-B1DD9F3F704D /* Shaders/shade.frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "shade.frag.glsl"; path = "/Users/urjasvisuthar/Desktop/KincProject/Shaders/shade.frag.glsl"; sourceTree = "<group>"; };
+		E27DE0EE-38FC-5697-9211-F0AAFA6099E1 /* Shaders/shade.vert.glsl */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "shade.vert.glsl"; path = "/Users/urjasvisuthar/Desktop/KincProject/Shaders/shade.vert.glsl"; sourceTree = "<group>"; };
+		36B259B8-4805-5463-850C-3D9D23FA6DCA /* Sources/main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "main.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/Sources/main.c"; sourceTree = "<group>"; };
+		C80C4729-6A6C-53C2-B063-5AC8677FD6D9 /* Sources/mat4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "mat4.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/Sources/mat4.c"; sourceTree = "<group>"; };
+		8A14F281-6D5C-57B6-AB4E-BCC26323DE03 /* Sources/mat4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "mat4.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/Sources/mat4.h"; sourceTree = "<group>"; };
+		3A4D7980-61A3-56C1-AC8F-F91F9F0C76F3 /* Sources/meshgenerator.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "meshgenerator.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/Sources/meshgenerator.c"; sourceTree = "<group>"; };
+		C2CA5056-5ACD-5CF7-A91C-B18C2754D5B8 /* Sources/meshgenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "meshgenerator.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/Sources/meshgenerator.h"; sourceTree = "<group>"; };
+		06A70E38-6FCA-542D-9EA8-3268E8916F5D /* Sources/pch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pch.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/Sources/pch.h"; sourceTree = "<group>"; };
+		85B58304-47CA-5CE6-A068-E87134728718 /* Sources/quaternion.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "quaternion.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/Sources/quaternion.c"; sourceTree = "<group>"; };
+		F0E8CA76-3012-5D9E-A25E-91CBFC19A2B6 /* Sources/quaternion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "quaternion.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/Sources/quaternion.h"; sourceTree = "<group>"; };
+		6D33433B-8349-57CB-AB93-B79986E6DF6B /* Sources/vector3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "vector3.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/Sources/vector3.c"; sourceTree = "<group>"; };
+		521C3AA9-67C7-533A-9786-7A2A2636AF7B /* Sources/vector3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vector3.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/Sources/vector3.h"; sourceTree = "<group>"; };
+		BC296DF7-10F1-558D-A3C3-289B01646691 /* Sources/vector4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "vector4.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/Sources/vector4.c"; sourceTree = "<group>"; };
+		217C32B7-8450-518C-A2CF-CEF280C53771 /* Sources/vector4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vector4.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/Sources/vector4.h"; sourceTree = "<group>"; };
+		1E0B1AAC-FBE5-58B0-BF98-41C543BFE767 /* build/Sources/g1.frag.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = "g1.frag.metal"; path = "/Users/urjasvisuthar/Desktop/KincProject/build/Sources/g1.frag.metal"; sourceTree = "<group>"; };
+		6C80DCB4-08F7-5D84-85DE-486F740FE518 /* build/Sources/g1.vert.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = "g1.vert.metal"; path = "/Users/urjasvisuthar/Desktop/KincProject/build/Sources/g1.vert.metal"; sourceTree = "<group>"; };
+		7664CD36-A2E8-5359-82EE-D6EE5950DB1E /* build/Sources/painter-colored.frag.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = "painter-colored.frag.metal"; path = "/Users/urjasvisuthar/Desktop/KincProject/build/Sources/painter-colored.frag.metal"; sourceTree = "<group>"; };
+		572B20F1-B99F-53EB-8B5B-EE2A5BC781F3 /* build/Sources/painter-colored.vert.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = "painter-colored.vert.metal"; path = "/Users/urjasvisuthar/Desktop/KincProject/build/Sources/painter-colored.vert.metal"; sourceTree = "<group>"; };
+		8ECA16FA-B6F2-5337-B78C-65B5D35E5336 /* build/Sources/painter-image.frag.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = "painter-image.frag.metal"; path = "/Users/urjasvisuthar/Desktop/KincProject/build/Sources/painter-image.frag.metal"; sourceTree = "<group>"; };
+		36CC2CEF-C31E-56A7-AA40-6369876E4DA7 /* build/Sources/painter-image.vert.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = "painter-image.vert.metal"; path = "/Users/urjasvisuthar/Desktop/KincProject/build/Sources/painter-image.vert.metal"; sourceTree = "<group>"; };
+		CD6F34F9-922E-5FFA-BE00-5CE76DA2AC72 /* build/Sources/painter-text.frag.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = "painter-text.frag.metal"; path = "/Users/urjasvisuthar/Desktop/KincProject/build/Sources/painter-text.frag.metal"; sourceTree = "<group>"; };
+		5997484D-9DE1-502A-B878-B8ADE5C3459A /* build/Sources/painter-text.vert.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = "painter-text.vert.metal"; path = "/Users/urjasvisuthar/Desktop/KincProject/build/Sources/painter-text.vert.metal"; sourceTree = "<group>"; };
+		F3D09BB1-C6A3-52EE-A7CE-B092BFADD857 /* build/Sources/painter-video.frag.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = "painter-video.frag.metal"; path = "/Users/urjasvisuthar/Desktop/KincProject/build/Sources/painter-video.frag.metal"; sourceTree = "<group>"; };
+		D9A1FD32-60C1-5E1F-AEE2-1789E6F99C5A /* build/Sources/painter-video.vert.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = "painter-video.vert.metal"; path = "/Users/urjasvisuthar/Desktop/KincProject/build/Sources/painter-video.vert.metal"; sourceTree = "<group>"; };
+		C9CFF715-4F05-5967-AB8E-EFA1D9BC9764 /* build/Sources/shade.frag.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = "shade.frag.metal"; path = "/Users/urjasvisuthar/Desktop/KincProject/build/Sources/shade.frag.metal"; sourceTree = "<group>"; };
+		42E81733-FAB9-525A-9652-4E5F0952CFDE /* build/Sources/shade.vert.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = "shade.vert.metal"; path = "/Users/urjasvisuthar/Desktop/KincProject/build/Sources/shade.vert.metal"; sourceTree = "<group>"; };
+		E1DC8404-3F85-5880-BFB8-37973816F620 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/G4.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "G4.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/G4.c.h"; sourceTree = "<group>"; };
+		C8499B43-93AB-5857-BD14-8BD277808523 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/G4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "G4.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/G4.h"; sourceTree = "<group>"; };
+		7EE6E734-0875-5577-83A3-B8DA5E1BF767 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/g4ong5unit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "g4ong5unit.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/g4ong5unit.c"; sourceTree = "<group>"; };
+		B2ACBBBE-5AE0-5E80-A3D0-0FE08D29F018 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "graphics.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/graphics.h"; sourceTree = "<group>"; };
+		2CCB1456-7D85-53FE-8AD2-D8AA2FE52345 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/indexbuffer.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "indexbuffer.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/indexbuffer.c.h"; sourceTree = "<group>"; };
+		34EA267A-0BBA-52EC-8DDE-7FA3B22DE06D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/indexbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "indexbuffer.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/indexbuffer.h"; sourceTree = "<group>"; };
+		CDC6B67B-CC70-52CC-94B2-8D137AC58F6D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/pipeline.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pipeline.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/pipeline.c.h"; sourceTree = "<group>"; };
+		55BFF6CD-3687-55F4-A3D9-389A6AD8F1EF /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/pipeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pipeline.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/pipeline.h"; sourceTree = "<group>"; };
+		1FAD9887-24B4-5505-9641-BF16D1FCF2C9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/rendertarget.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "rendertarget.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/rendertarget.c.h"; sourceTree = "<group>"; };
+		E3054774-7EED-5654-AFDD-A8A4FA63D1ED /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/rendertarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "rendertarget.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/rendertarget.h"; sourceTree = "<group>"; };
+		51DF166A-6646-52DD-BB5C-140470BDC213 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/shader.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "shader.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/shader.c.h"; sourceTree = "<group>"; };
+		F990B598-5FCE-5B76-9CA1-67EAA445B7D5 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "shader.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/shader.h"; sourceTree = "<group>"; };
+		4BF7C8FE-F547-5FCD-906A-31520B30B76D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/texture.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "texture.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/texture.c.h"; sourceTree = "<group>"; };
+		990F7E63-E9D0-5C88-B2C9-C7D9B7381260 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "texture.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/texture.h"; sourceTree = "<group>"; };
+		ABC4C608-81AC-57F3-9306-15A87F445701 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/texturearray.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "texturearray.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/texturearray.c.h"; sourceTree = "<group>"; };
+		ED4FB944-4AAC-5F44-803D-FB16DCECC099 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/texturearray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "texturearray.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/texturearray.h"; sourceTree = "<group>"; };
+		C4DDAA6A-FDA1-514C-BECE-21C6D43BBBA4 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/vertexbuffer.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vertexbuffer.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/vertexbuffer.c.h"; sourceTree = "<group>"; };
+		1EA96152-BD65-5355-9D1E-5FC15FFD8ED8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/vertexbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vertexbuffer.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/vertexbuffer.h"; sourceTree = "<group>"; };
+		4158EFFA-4044-5686-B197-F8CDF8C8DFB0 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/compute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "compute.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/compute.h"; sourceTree = "<group>"; };
+		3A83D62F-A79C-5312-81DF-6611FCD4505B /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/compute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "compute.m"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/compute.m"; sourceTree = "<group>"; };
+		3FF31F7D-13E7-571D-A04A-67E58422D293 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/Metal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Metal.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/Metal.h"; sourceTree = "<group>"; };
+		5D59348A-3B4A-587D-B9B3-D6EB6AD93653 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/Metal.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Metal.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/Metal.m.h"; sourceTree = "<group>"; };
+		0D40C058-DD89-56C5-B279-F76B3F0DA1E9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/commandlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "commandlist.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/commandlist.h"; sourceTree = "<group>"; };
+		74F1EEF9-8F45-5CB1-8F24-904B6467B856 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/commandlist.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "commandlist.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/commandlist.m.h"; sourceTree = "<group>"; };
+		7D4B5583-B0C0-538B-8123-7CDD9CFC0A0E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/constantbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "constantbuffer.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/constantbuffer.h"; sourceTree = "<group>"; };
+		D2688E8A-EDE8-57F7-8722-87340A68BDB4 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/constantbuffer.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "constantbuffer.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/constantbuffer.m.h"; sourceTree = "<group>"; };
+		95B6C6A3-A9FF-5029-97B8-A7AA5C260E0C /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "graphics.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/graphics.h"; sourceTree = "<group>"; };
+		0FCF247B-BA2F-55B8-89C3-D32FE47C6115 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/indexbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "indexbuffer.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/indexbuffer.h"; sourceTree = "<group>"; };
+		E391357C-8AB3-586B-81E9-C6B7F182F188 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/indexbuffer.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "indexbuffer.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/indexbuffer.m.h"; sourceTree = "<group>"; };
+		715CC507-3515-589D-88A1-B3BFC2F0855E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/metalunit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "metalunit.m"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/metalunit.m"; sourceTree = "<group>"; };
+		0B06C0E1-E72A-5945-A7A8-ADD0923E9FEA /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/pipeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pipeline.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/pipeline.h"; sourceTree = "<group>"; };
+		B5C8BFB5-6CA6-5478-9232-232781D3EB93 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/pipeline.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pipeline.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/pipeline.m.h"; sourceTree = "<group>"; };
+		71E403F3-EEF6-51C1-96C5-B926093B5795 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/rendertarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "rendertarget.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/rendertarget.h"; sourceTree = "<group>"; };
+		50A14B8C-996E-50D0-801F-BE894801C282 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/rendertarget.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "rendertarget.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/rendertarget.m.h"; sourceTree = "<group>"; };
+		C5ECF2D9-B246-5E88-9E1E-6EACBE78E53B /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "shader.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/shader.h"; sourceTree = "<group>"; };
+		AA81E18D-987C-5690-B3F1-0A4DB4AA5EB2 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/shader.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "shader.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/shader.m.h"; sourceTree = "<group>"; };
+		EF9B31B2-6F2C-5EB9-8996-F368A523E4B7 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "texture.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/texture.h"; sourceTree = "<group>"; };
+		9EC62F8C-7179-5C4E-8974-61CDA09AA25D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/texture.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "texture.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/texture.m.h"; sourceTree = "<group>"; };
+		746D9696-931E-540F-96EC-1CE7DC454E31 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/vertexbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vertexbuffer.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/vertexbuffer.h"; sourceTree = "<group>"; };
+		FEDF0FCA-DFB2-5A31-9E4F-9DF39A81FA08 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/vertexbuffer.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vertexbuffer.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/vertexbuffer.m.h"; sourceTree = "<group>"; };
+		2F873C07-6CB3-57E8-9A20-61D05AE8455D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/appleunit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "appleunit.m"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/appleunit.m"; sourceTree = "<group>"; };
+		93264F58-7E01-50BD-88A0-BAA5F9A41BA1 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/http.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "http.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/http.m.h"; sourceTree = "<group>"; };
+		890E153C-FE4C-50AE-8BFD-53FFD410538D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/thread.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "thread.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/thread.m.h"; sourceTree = "<group>"; };
+		DB3AC957-6079-5F7A-BA02-48E9E4CEAE76 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "video.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/video.h"; sourceTree = "<group>"; };
+		C2E4317B-FA51-59E5-8FEF-66984767D937 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/video.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "video.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/video.m.h"; sourceTree = "<group>"; };
+		845DA431-35E7-50BD-B482-DA6CE6E305B2 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/atomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "atomic.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/atomic.h"; sourceTree = "<group>"; };
+		79F6140E-374D-519E-A12C-52E2B8377B6C /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/event.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "event.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/event.c.h"; sourceTree = "<group>"; };
+		80C7A990-8198-5ECF-8A6A-D843DE2FABA7 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "event.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/event.h"; sourceTree = "<group>"; };
+		5C810D76-19DC-580B-A4B9-FAC40758798F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/mutex.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "mutex.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/mutex.c.h"; sourceTree = "<group>"; };
+		1834C4E5-C093-5BBD-B7CB-5463E61DD691 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/mutex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "mutex.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/mutex.h"; sourceTree = "<group>"; };
+		ACDA02C9-DA52-59DD-9DD0-F2EDB5149F22 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/posixunit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "posixunit.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/posixunit.c"; sourceTree = "<group>"; };
+		4CFD1BFE-49E1-543A-9701-2A36CAA9B4A8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/semaphore.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "semaphore.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/semaphore.c.h"; sourceTree = "<group>"; };
+		A90F8C4A-B086-5318-A901-FE839B41173C /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/semaphore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "semaphore.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/semaphore.h"; sourceTree = "<group>"; };
+		B3A5D22A-E50D-5834-96EF-2F3CD7176453 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/thread.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "thread.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/thread.c.h"; sourceTree = "<group>"; };
+		CFFF22B4-EB45-57F6-A04F-DCF8446D4037 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/thread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "thread.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/thread.h"; sourceTree = "<group>"; };
+		1CB41CD3-31CD-5CB6-940B-514650EE6DFF /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/threadlocal.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "threadlocal.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/threadlocal.c.h"; sourceTree = "<group>"; };
+		706E7283-DD8B-500B-8FD3-72FC9474E16D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/threadlocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "threadlocal.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/threadlocal.h"; sourceTree = "<group>"; };
+		7B143E25-72A2-564D-86DC-975C7E606F07 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/BasicOpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "BasicOpenGLView.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/BasicOpenGLView.h"; sourceTree = "<group>"; };
+		28034AD8-1F68-5FF7-AD7D-524F1DFE7500 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/BasicOpenGLView.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "BasicOpenGLView.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/BasicOpenGLView.m.h"; sourceTree = "<group>"; };
+		B561FBBD-D5EE-55BA-A8F2-4DE718136182 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/HIDGamepad.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HIDGamepad.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/HIDGamepad.c.h"; sourceTree = "<group>"; };
+		6CBAC08F-6738-5CE5-A8FC-350C9BE2EB44 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/HIDGamepad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HIDGamepad.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/HIDGamepad.h"; sourceTree = "<group>"; };
+		FAA1D169-2067-56C8-BCE3-C6328E92F4C4 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/HIDManager.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HIDManager.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/HIDManager.c.h"; sourceTree = "<group>"; };
+		DB7DCE61-A725-528B-B959-A6B2BF64ABF2 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/HIDManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HIDManager.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/HIDManager.h"; sourceTree = "<group>"; };
+		DDEA7ABF-CE46-54F2-A2F8-C164FCB65296 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/audio.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "audio.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/audio.c.h"; sourceTree = "<group>"; };
+		25D5E3A2-2762-5911-83CD-95D9AEEBA93E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/display.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "display.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/display.m.h"; sourceTree = "<group>"; };
+		E087BA6A-8441-5E86-BE64-877209B2CDDA /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/displaydata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "displaydata.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/displaydata.h"; sourceTree = "<group>"; };
+		687046BA-52AC-525F-986F-E47BA5AF35EB /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/mac.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "mac.plist"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/mac.plist"; sourceTree = "<group>"; };
+		830ADE28-227E-5793-A596-FC561EE4654F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/macosunit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "macosunit.m"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/macosunit.m"; sourceTree = "<group>"; };
+		9CCB5134-A889-5CE2-9EB9-34AC3B180A6E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/mouse.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "mouse.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/mouse.m.h"; sourceTree = "<group>"; };
+		F4D9721A-842A-587C-880C-649E03755032 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/system.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "system.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/system.c.h"; sourceTree = "<group>"; };
+		7E27A706-D173-5C05-BC64-EE1DE20F9D4E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/system.m.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "system.m.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/system.m.h"; sourceTree = "<group>"; };
+		CE5D6E13-104F-5E5C-BC67-4C21AE03CE11 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/window.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "window.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/window.c.h"; sourceTree = "<group>"; };
+		7E5C54DE-DEF9-5338-9FD4-7EB084104FA7 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/windowdata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "windowdata.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/windowdata.h"; sourceTree = "<group>"; };
+		8053A12D-1499-5406-8070-94A88B7666DA /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/g1.frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "g1.frag.glsl"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/g1.frag.glsl"; sourceTree = "<group>"; };
+		BC294388-9D10-5987-A1A0-D3278F2C472F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/g1.vert.glsl */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "g1.vert.glsl"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/g1.vert.glsl"; sourceTree = "<group>"; };
+		82A69CDD-C30A-58FD-BDFD-D5C41E116D6C /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-colored.frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "painter-colored.frag.glsl"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-colored.frag.glsl"; sourceTree = "<group>"; };
+		16F9B45A-1D7C-58E2-8288-A7C4885B9976 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-colored.vert.glsl */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "painter-colored.vert.glsl"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-colored.vert.glsl"; sourceTree = "<group>"; };
+		FB49AB22-C09A-5B5A-86FB-766F9D5ACD20 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-image.frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "painter-image.frag.glsl"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-image.frag.glsl"; sourceTree = "<group>"; };
+		1C5744C7-7AF4-564E-A3EC-724BE03509C6 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-image.vert.glsl */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "painter-image.vert.glsl"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-image.vert.glsl"; sourceTree = "<group>"; };
+		B38AEACB-DC87-5538-905F-16FE678478E2 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-text.frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "painter-text.frag.glsl"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-text.frag.glsl"; sourceTree = "<group>"; };
+		CCDE637C-CE2E-5997-B567-1411B9E29D48 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-text.vert.glsl */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "painter-text.vert.glsl"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-text.vert.glsl"; sourceTree = "<group>"; };
+		02634824-08E0-5730-A1D4-7FC7EBFC8328 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-video.frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "painter-video.frag.glsl"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-video.frag.glsl"; sourceTree = "<group>"; };
+		8307B9C0-C499-559C-90FD-7C5E0721AAFC /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-video.vert.glsl */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "painter-video.vert.glsl"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-video.vert.glsl"; sourceTree = "<group>"; };
+		2EA9A113-4DE6-5548-89DA-438E7E0736EE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/color.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "color.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/color.c.h"; sourceTree = "<group>"; };
+		8C814237-CFEE-5AA5-A3A1-B55E684267CE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "color.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/color.h"; sourceTree = "<group>"; };
+		177D1587-6FA2-5A8E-A736-88435AD21E5B /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/display.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "display.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/display.h"; sourceTree = "<group>"; };
+		D80AC8BD-937F-5111-8056-033791FB99F3 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/error.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "error.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/error.c.h"; sourceTree = "<group>"; };
+		E8DD90E0-4C0A-58B3-8035-C6643DB612C9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "error.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/error.h"; sourceTree = "<group>"; };
+		734E8A75-F47A-54FD-B7B1-3363B9AB174D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "global.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/global.h"; sourceTree = "<group>"; };
+		E94305D6-4EBE-5D8A-8B31-F15735B1651D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/image.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "image.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/image.c.h"; sourceTree = "<group>"; };
+		76A830CC-A466-5685-8D71-8E1728E5AFBA /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "image.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/image.h"; sourceTree = "<group>"; };
+		0CA7C4D1-272D-59BC-B24B-65C235860C35 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/log.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "log.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/log.c.h"; sourceTree = "<group>"; };
+		7B4F79FC-47B6-5DBD-BE29-D4DC38C084BC /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "log.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/log.h"; sourceTree = "<group>"; };
+		FC983B99-954A-50D2-A8C8-08BCA10262C7 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/pch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pch.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/pch.h"; sourceTree = "<group>"; };
+		4CBE9584-2410-58AA-AA12-EC806C47B452 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/rootunit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "rootunit.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/rootunit.c"; sourceTree = "<group>"; };
+		97312542-0F75-5CDE-946D-D834D6640246 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/system.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "system.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/system.c.h"; sourceTree = "<group>"; };
+		EF555358-7CB7-59FE-BCD9-35E283CC19B3 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/system.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "system.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/system.h"; sourceTree = "<group>"; };
+		87D4D6A1-5AC0-5464-98CD-4F06A0E97F52 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "video.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/video.h"; sourceTree = "<group>"; };
+		8D8852A4-3581-5BB9-B418-8E4C9E701E76 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/window.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "window.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/window.c.h"; sourceTree = "<group>"; };
+		B3F24885-5A1E-5851-817A-29732806C713 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "window.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/window.h"; sourceTree = "<group>"; };
+		B4E82CBA-CA4B-5779-A57A-1EC46B75B4AE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/a1unit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "a1unit.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/a1unit.c"; sourceTree = "<group>"; };
+		DA63FFF0-B9C4-514F-8811-FB373F6F49CB /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/audio.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "audio.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/audio.c.h"; sourceTree = "<group>"; };
+		08CA3C0E-D5AC-51D0-9882-A75CE02AC290 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/audio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "audio.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/audio.h"; sourceTree = "<group>"; };
+		CB4CD968-188B-55B5-9E0E-90F6894056DD /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/sound.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "sound.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/sound.c.h"; sourceTree = "<group>"; };
+		7DD0BEED-7468-58F1-8372-71B64FE6FCDF /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/sound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "sound.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/sound.h"; sourceTree = "<group>"; };
+		4B2336CD-5B59-509E-B29B-5F9AFD190D47 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/soundstream.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "soundstream.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/soundstream.c.h"; sourceTree = "<group>"; };
+		728FAAF9-78F6-5634-84F3-8BE111F4ADBE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/soundstream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "soundstream.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/soundstream.h"; sourceTree = "<group>"; };
+		593A9493-163F-5BF1-92A8-A8DA66CE1F46 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/stb_vorbis.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "stb_vorbis.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/stb_vorbis.c"; sourceTree = "<group>"; };
+		FD9F443A-23BB-5C40-8F95-C1DEF5F7CB4D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio2/audio.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "audio.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio2/audio.c"; sourceTree = "<group>"; };
+		76EDA67C-0FD4-52D4-B499-71A3436BB217 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio2/audio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "audio.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio2/audio.h"; sourceTree = "<group>"; };
+		11AE5DAC-17D0-59B9-BE2D-5A711CB08BB0 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/compute/compute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "compute.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/compute/compute.h"; sourceTree = "<group>"; };
+		FB8F2FF4-58E7-5E9D-B803-D1516CE9803D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics1/graphics.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "graphics.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics1/graphics.c"; sourceTree = "<group>"; };
+		FF0A6FED-A580-5564-81AC-7FF6214A2D5F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics1/graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "graphics.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics1/graphics.h"; sourceTree = "<group>"; };
+		FF183A23-F2EB-5446-92A2-1AE29D8346D8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "graphics.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics.h"; sourceTree = "<group>"; };
+		68221B85-4715-5463-B4A3-48F8EBA37AB3 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics_kore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = "graphics_kore.cpp"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics_kore.cpp"; sourceTree = "<group>"; };
+		912553F3-E642-5B90-A87A-8F29028F6159 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics_soft.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "graphics_soft.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics_soft.c"; sourceTree = "<group>"; };
+		8D03627F-CD8E-5EE3-BBB1-9ACF9F91EC89 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/constantlocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "constantlocation.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/constantlocation.h"; sourceTree = "<group>"; };
+		6A5A93BB-1DAD-5344-BC44-D42C737878A8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/g4unit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "g4unit.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/g4unit.c"; sourceTree = "<group>"; };
+		64717DE7-BFD6-5D5A-A402-728778F94EA8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/graphics.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "graphics.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/graphics.c.h"; sourceTree = "<group>"; };
+		BF8FCF0A-7F59-55E9-9B63-BC085A513DBE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "graphics.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/graphics.h"; sourceTree = "<group>"; };
+		574C8451-CC2B-5A6E-B895-9979C2A30580 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/indexbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "indexbuffer.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/indexbuffer.h"; sourceTree = "<group>"; };
+		63D509B6-A661-5558-B9F6-C37B9C005309 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/pipeline.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pipeline.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/pipeline.c.h"; sourceTree = "<group>"; };
+		F8DC65B8-4A6A-5280-A38C-C3658A619B33 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/pipeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pipeline.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/pipeline.h"; sourceTree = "<group>"; };
+		E31DB0C5-38AB-537E-9C2B-54E356EE2253 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/rendertarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "rendertarget.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/rendertarget.h"; sourceTree = "<group>"; };
+		C618790B-9BA2-5A03-BFFF-69AC8E18A944 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "shader.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/shader.h"; sourceTree = "<group>"; };
+		BC216E3B-90C7-52CB-9C20-10B278E78930 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "texture.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/texture.h"; sourceTree = "<group>"; };
+		9A3F3AAB-EE67-5160-A43D-9C46CF882B79 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/texturearray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "texturearray.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/texturearray.h"; sourceTree = "<group>"; };
+		7D609BB3-F406-5E02-95E2-2BD49D898999 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/textureunit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "textureunit.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/textureunit.h"; sourceTree = "<group>"; };
+		72638045-8E10-5FC9-B2BC-543058180B2E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/usage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "usage.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/usage.h"; sourceTree = "<group>"; };
+		474037B9-784A-5684-9CAC-0BFD3FD7920A /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/vertexbuffer.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vertexbuffer.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/vertexbuffer.c.h"; sourceTree = "<group>"; };
+		77B9E3FE-1303-5538-A932-E1FF010174E9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/vertexbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vertexbuffer.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/vertexbuffer.h"; sourceTree = "<group>"; };
+		26487E8F-1A80-580C-9CB4-636D32B1BABB /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/vertexstructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vertexstructure.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/vertexstructure.h"; sourceTree = "<group>"; };
+		5B8F9435-2779-50B9-809A-373021EC9EFE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/commandlist.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "commandlist.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/commandlist.c.h"; sourceTree = "<group>"; };
+		DAD471E7-A96E-5ABE-9B84-817E2A71179F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/commandlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "commandlist.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/commandlist.h"; sourceTree = "<group>"; };
+		D0C3B2C2-8EA4-5A56-A249-546CB5C7E969 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/compute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "compute.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/compute.h"; sourceTree = "<group>"; };
+		B9BC6194-5A60-56E0-B87F-54DE5B597668 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/constantbuffer.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "constantbuffer.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/constantbuffer.c.h"; sourceTree = "<group>"; };
+		3EEDC32D-BECC-533D-BD7E-C0F7F82A1C24 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/constantbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "constantbuffer.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/constantbuffer.h"; sourceTree = "<group>"; };
+		1A7BCF7D-BC24-5552-85A4-F1FBB236C871 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/constantlocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "constantlocation.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/constantlocation.h"; sourceTree = "<group>"; };
+		3A96BD0E-DCB1-5D4F-9057-45FBBE8EDE49 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/g5unit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "g5unit.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/g5unit.c"; sourceTree = "<group>"; };
+		A1B05A50-1841-5A34-8482-BB8E53BB419E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/graphics.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "graphics.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/graphics.c.h"; sourceTree = "<group>"; };
+		C1E8460D-418D-50B9-88E7-B3A3BD4B81CE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "graphics.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/graphics.h"; sourceTree = "<group>"; };
+		3E178B88-12C0-5BF0-924B-68C0BF1EE2B6 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/indexbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "indexbuffer.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/indexbuffer.h"; sourceTree = "<group>"; };
+		4003EBC4-A321-5563-A45F-75D9FCF22BAE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/pipeline.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pipeline.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/pipeline.c.h"; sourceTree = "<group>"; };
+		A30A1736-09B9-5E6D-967B-9504ED33B59A /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/pipeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pipeline.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/pipeline.h"; sourceTree = "<group>"; };
+		92D74CD7-6C15-5E2D-9593-0C19CA1BE182 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/raytrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "raytrace.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/raytrace.h"; sourceTree = "<group>"; };
+		8042D97F-31FC-598B-93F9-20479448143E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/rendertarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "rendertarget.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/rendertarget.h"; sourceTree = "<group>"; };
+		59C197B9-CC7B-5693-B2EE-9B8A0BF00827 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "shader.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/shader.h"; sourceTree = "<group>"; };
+		EE03134D-1167-589C-A011-BF0BC0645FF5 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/texture.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "texture.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/texture.c.h"; sourceTree = "<group>"; };
+		99922E44-5F56-5491-9D8B-58B7C9AC21D0 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "texture.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/texture.h"; sourceTree = "<group>"; };
+		6C0B9978-789D-5330-9D4A-3D18F6CA7193 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/textureunit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "textureunit.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/textureunit.h"; sourceTree = "<group>"; };
+		AC601B72-B780-585D-9397-6613D4A64C0E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/vertexbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vertexbuffer.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/vertexbuffer.h"; sourceTree = "<group>"; };
+		D37BABAF-CD83-5CC9-9A42-5325163F23A9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/vertexstructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vertexstructure.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/vertexstructure.h"; sourceTree = "<group>"; };
+		1CD95584-451E-5E37-87FE-EFD46B9A555E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/acceleration.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "acceleration.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/acceleration.c.h"; sourceTree = "<group>"; };
+		CCF39FAF-28F3-59ED-89A5-4F154FE21EAC /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/acceleration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "acceleration.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/acceleration.h"; sourceTree = "<group>"; };
+		FC499397-8938-55A9-A4DF-37DE406463AC /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/gamepad.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gamepad.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/gamepad.c.h"; sourceTree = "<group>"; };
+		9616B56E-51DC-5E7C-A3BF-BF1925475E3B /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/gamepad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gamepad.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/gamepad.h"; sourceTree = "<group>"; };
+		AFE41486-AFD4-5E24-9112-BEA308DAE107 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/inputunit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "inputunit.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/inputunit.c"; sourceTree = "<group>"; };
+		C1723FA9-7F3D-56DF-BD88-2C1381374D3F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/keyboard.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "keyboard.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/keyboard.c.h"; sourceTree = "<group>"; };
+		7FD4DFB3-DDEA-542E-B0B9-2AB29EC22605 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/keyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "keyboard.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/keyboard.h"; sourceTree = "<group>"; };
+		54AB498A-C53A-5891-A519-E5F38E64F7D3 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/mouse.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "mouse.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/mouse.c.h"; sourceTree = "<group>"; };
+		4C315C8D-0838-5656-9DB5-9C40F3737573 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/mouse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "mouse.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/mouse.h"; sourceTree = "<group>"; };
+		BFAAA610-62A8-593C-BB84-7E90AD8C7273 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/pen.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pen.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/pen.c.h"; sourceTree = "<group>"; };
+		5625604F-AE77-54AC-91BF-8F231FFB3672 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/pen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pen.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/pen.h"; sourceTree = "<group>"; };
+		8C1747A9-36A2-5299-8777-E39810855F6E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/rotation.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "rotation.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/rotation.c.h"; sourceTree = "<group>"; };
+		B2066DF6-E6F3-518B-A93F-2D6685C297E5 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/rotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "rotation.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/rotation.h"; sourceTree = "<group>"; };
+		5A0886A7-FB09-5592-9CA0-F7C898B0A72A /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/surface.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "surface.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/surface.c.h"; sourceTree = "<group>"; };
+		26C1D5E2-9F9E-5D91-94AA-DE91D7A7D987 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/surface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "surface.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/surface.h"; sourceTree = "<group>"; };
+		135FC34B-729A-5544-9C93-1CC6DAC2734B /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/filereader.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "filereader.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/filereader.c.h"; sourceTree = "<group>"; };
+		D9AC7CB1-AF05-5FE4-96EA-A0BC8C36DFAA /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/filereader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "filereader.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/filereader.h"; sourceTree = "<group>"; };
+		C1F6123C-7A01-54A7-A6D2-D11F42A9A5D4 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/filewriter.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "filewriter.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/filewriter.c.h"; sourceTree = "<group>"; };
+		D91E7F6C-8F33-5EA0-90A1-D7F76EEE687A /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/filewriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "filewriter.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/filewriter.h"; sourceTree = "<group>"; };
+		B6C009BD-0101-5CCD-800C-89A2B0B424D5 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/iounit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "iounit.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/iounit.c"; sourceTree = "<group>"; };
+		8C307800-DFF6-5BE1-BEBF-19EBD5DAE0E2 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/libs/lz4x.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "lz4x.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/libs/lz4x.h"; sourceTree = "<group>"; };
+		CEBAEA9C-FBC1-5159-A566-5BB11A892139 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/libs/stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "stb_image.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/libs/stb_image.h"; sourceTree = "<group>"; };
+		5AFA6BFC-4FF0-5F44-9146-0357C0F21EB8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/core.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "core.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/core.c.h"; sourceTree = "<group>"; };
+		CE8F5D08-5D90-5D6B-9F27-6B278F9F1221 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "core.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/core.h"; sourceTree = "<group>"; };
+		FC100BE3-0E67-5F5A-839D-A5EF84714256 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/mathunit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "mathunit.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/mathunit.c"; sourceTree = "<group>"; };
+		76D34552-D2A9-54DB-B9C1-4FFFB4076B43 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/matrix.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "matrix.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/matrix.c.h"; sourceTree = "<group>"; };
+		69465E14-40BF-5B79-8926-43B29C312C81 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "matrix.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/matrix.h"; sourceTree = "<group>"; };
+		108E537D-3E18-5472-BE0C-7A1C4372FB12 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/quaternion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "quaternion.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/quaternion.h"; sourceTree = "<group>"; };
+		FEEEC9D4-41F7-5BFA-A0C7-D4A52B0FB061 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/random.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "random.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/random.c.h"; sourceTree = "<group>"; };
+		FD8FCBB8-5575-59F6-AB26-42D238BBEF0E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "random.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/random.h"; sourceTree = "<group>"; };
+		B498CCAB-BE1D-510A-9C18-9C3B73697E25 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vector.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/vector.h"; sourceTree = "<group>"; };
+		67DDEF55-5C69-5EE3-AB78-BBFF5B418087 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/http.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "http.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/http.c.h"; sourceTree = "<group>"; };
+		FFF01160-4708-5CBC-960A-570155317E97 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/http.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "http.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/http.h"; sourceTree = "<group>"; };
+		75EC7F67-A9A8-5D68-9DED-84EC72B9A29C /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/networkunit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "networkunit.c"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/networkunit.c"; sourceTree = "<group>"; };
+		85877148-70A9-5AD7-BBDF-E2B0770B483E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/socket.c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "socket.c.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/socket.c.h"; sourceTree = "<group>"; };
+		A593B092-BB57-5560-AAF9-FB1B80BB1BB8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/socket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "socket.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/socket.h"; sourceTree = "<group>"; };
+		D7F8C9F7-B8E3-55F2-942C-3744436FA7C5 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/simd/float32x4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "float32x4.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/simd/float32x4.h"; sourceTree = "<group>"; };
+		FA761C31-8756-55B7-98A9-86700C58F4F9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/atomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "atomic.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/atomic.h"; sourceTree = "<group>"; };
+		3C75C44C-3B38-55B7-9B2E-204E351594CD /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "event.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/event.h"; sourceTree = "<group>"; };
+		30991617-9D77-53BA-BFA8-E91AA3EC7B00 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/fiber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "fiber.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/fiber.h"; sourceTree = "<group>"; };
+		8E505DD1-113C-500D-8047-13F741A14BE0 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/mutex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "mutex.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/mutex.h"; sourceTree = "<group>"; };
+		60C2B7E2-4B99-583D-BDAE-223F56E693C3 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/semaphore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "semaphore.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/semaphore.h"; sourceTree = "<group>"; };
+		9BA66D64-EA52-54C7-B172-AF2FB89A2BC1 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/thread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "thread.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/thread.h"; sourceTree = "<group>"; };
+		4F109560-CD0F-5641-B45B-49847874089E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/threadlocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "threadlocal.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/threadlocal.h"; sourceTree = "<group>"; };
+		1B491B8D-D82A-5BA7-B4F5-D4F969CC2380 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/vr/vrinterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "vrinterface.h"; path = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/vr/vrinterface.h"; sourceTree = "<group>"; };
+		B762EAB4-B440-54B0-AF11-18D57AD97A7F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E8A81D22-F8B2-5ED0-8A93-0330D32B4516 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C21A316-22CF-5D74-8864-F282E9FB494E /* Metal.framework in Frameworks */,
+				3AD3DFAB-CC38-50C4-852B-F477AC625E49 /* MetalKit.framework in Frameworks */,
+				BBF8BBA9-1F6D-5693-BD54-5EF6A43947B6 /* IOKit.framework in Frameworks */,
+				426BBB40-6116-52B7-803A-7CB947A3799B /* Cocoa.framework in Frameworks */,
+				FA243EC5-5420-5C61-9402-746B410404CC /* AppKit.framework in Frameworks */,
+				741C3808-8948-5064-8CFF-25197196BC59 /* CoreAudio.framework in Frameworks */,
+				CED3404B-7117-5B95-BD4E-0136E7CC54A6 /* CoreData.framework in Frameworks */,
+				68061C70-15B7-5350-81D9-DBB8DD09C5E3 /* CoreMedia.framework in Frameworks */,
+				C20D409A-BCDD-5897-B7AF-DBBCA6692F7E /* CoreVideo.framework in Frameworks */,
+				5D604C28-C3E4-52C3-9DE2-81E6A1F56EF5 /* AVFoundation.framework in Frameworks */,
+				3688E662-78B9-56C9-980C-0CDFAC75EEF9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB579A34-76E1-5D5C-BBFF-4AD440369A8E = {
+			isa = PBXGroup;
+			children = (
+				B762EAB4-B440-54B0-AF11-18D57AD97A7F /* Images.xcassets */,
+				D9FA1022-EDE6-5D88-852F-B54E7CF4A9E6 /* Deployment */,
+				2CD9435B-DADE-5965-A4E0-4B964998A500 /* New Project */,
+				24C69AB1-AAF0-51E6-8E5F-D20EF558C10E /* Kinc */,
+				50EA2DE0-2742-50B5-8171-C690125607D1 /* Frameworks */,
+				4A9BB68F-D945-5666-AC14-842E130266D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A9BB68F-D945-5666-AC14-842E130266D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9137F3A1-B0FE-5708-A1F3-16C8BFD9A802 /* New-Project.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50EA2DE0-2742-50B5-8171-C690125607D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD660FC1-CF47-505A-8D6B-70BF9E79F4E5 /* Metal.framework */,
+				E064B346-CB40-5B37-BF7D-378058D02358 /* MetalKit.framework */,
+				26B8FD7E-D5FE-567B-8D56-A88955FE7F79 /* IOKit.framework */,
+				2999C92E-95C2-52D7-86EC-5A82A0D424CE /* Cocoa.framework */,
+				D22D8E4C-2C88-554B-8C0A-B20AFC8731C6 /* AppKit.framework */,
+				F803B073-1DD8-55A4-89A4-99C27327D950 /* CoreAudio.framework */,
+				A6BC4ECD-516E-58CD-B05E-2A9B321F5298 /* CoreData.framework */,
+				3127646C-3A05-5B82-8267-FDF35F9E4302 /* CoreMedia.framework */,
+				45FCA3F2-1BCF-5FF4-A83F-A41F7BC8D3BF /* CoreVideo.framework */,
+				E870F33D-373E-5BF1-AF41-3039A46DD285 /* AVFoundation.framework */,
+				80DC8B1A-57B4-5A7C-AD29-8F65FA0F4AB8 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0EBF2CDF-23D9-5509-9105-212573A3D12E /* New Project/Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				6F138DC6-18B1-5079-9F8C-B1DD9F3F704D /* Shaders/shade.frag.glsl */,
+				E27DE0EE-38FC-5697-9211-F0AAFA6099E1 /* Shaders/shade.vert.glsl */,
+			);
+			name = "Shaders";
+			sourceTree = "<group>";
+		};
+		2CD9435B-DADE-5965-A4E0-4B964998A500 /* New Project */ = {
+			isa = PBXGroup;
+			children = (
+				0EBF2CDF-23D9-5509-9105-212573A3D12E /* New Project/Shaders */,
+				AD5F0491-17A4-545B-8657-67DF9EC37599 /* New Project/Sources */,
+				DE53C9EB-708C-5B53-BA8F-5344BAD0375E /* New Project/build */,
+			);
+			path = ../;
+			name = "New Project";
+			sourceTree = "<group>";
+		};
+		AD5F0491-17A4-545B-8657-67DF9EC37599 /* New Project/Sources */ = {
+			isa = PBXGroup;
+			children = (
+				36B259B8-4805-5463-850C-3D9D23FA6DCA /* Sources/main.c */,
+				C80C4729-6A6C-53C2-B063-5AC8677FD6D9 /* Sources/mat4.c */,
+				8A14F281-6D5C-57B6-AB4E-BCC26323DE03 /* Sources/mat4.h */,
+				3A4D7980-61A3-56C1-AC8F-F91F9F0C76F3 /* Sources/meshgenerator.c */,
+				C2CA5056-5ACD-5CF7-A91C-B18C2754D5B8 /* Sources/meshgenerator.h */,
+				06A70E38-6FCA-542D-9EA8-3268E8916F5D /* Sources/pch.h */,
+				85B58304-47CA-5CE6-A068-E87134728718 /* Sources/quaternion.c */,
+				F0E8CA76-3012-5D9E-A25E-91CBFC19A2B6 /* Sources/quaternion.h */,
+				6D33433B-8349-57CB-AB93-B79986E6DF6B /* Sources/vector3.c */,
+				521C3AA9-67C7-533A-9786-7A2A2636AF7B /* Sources/vector3.h */,
+				BC296DF7-10F1-558D-A3C3-289B01646691 /* Sources/vector4.c */,
+				217C32B7-8450-518C-A2CF-CEF280C53771 /* Sources/vector4.h */,
+			);
+			name = "Sources";
+			sourceTree = "<group>";
+		};
+		16318885-B129-5E12-AEF5-B53E5F6D49A7 /* New Project/build/Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1E0B1AAC-FBE5-58B0-BF98-41C543BFE767 /* build/Sources/g1.frag.metal */,
+				6C80DCB4-08F7-5D84-85DE-486F740FE518 /* build/Sources/g1.vert.metal */,
+				7664CD36-A2E8-5359-82EE-D6EE5950DB1E /* build/Sources/painter-colored.frag.metal */,
+				572B20F1-B99F-53EB-8B5B-EE2A5BC781F3 /* build/Sources/painter-colored.vert.metal */,
+				8ECA16FA-B6F2-5337-B78C-65B5D35E5336 /* build/Sources/painter-image.frag.metal */,
+				36CC2CEF-C31E-56A7-AA40-6369876E4DA7 /* build/Sources/painter-image.vert.metal */,
+				CD6F34F9-922E-5FFA-BE00-5CE76DA2AC72 /* build/Sources/painter-text.frag.metal */,
+				5997484D-9DE1-502A-B878-B8ADE5C3459A /* build/Sources/painter-text.vert.metal */,
+				F3D09BB1-C6A3-52EE-A7CE-B092BFADD857 /* build/Sources/painter-video.frag.metal */,
+				D9A1FD32-60C1-5E1F-AEE2-1789E6F99C5A /* build/Sources/painter-video.vert.metal */,
+				C9CFF715-4F05-5967-AB8E-EFA1D9BC9764 /* build/Sources/shade.frag.metal */,
+				42E81733-FAB9-525A-9652-4E5F0952CFDE /* build/Sources/shade.vert.metal */,
+			);
+			name = "Sources";
+			sourceTree = "<group>";
+		};
+		DE53C9EB-708C-5B53-BA8F-5344BAD0375E /* New Project/build */ = {
+			isa = PBXGroup;
+			children = (
+				16318885-B129-5E12-AEF5-B53E5F6D49A7 /* New Project/build/Sources */,
+			);
+			name = "build";
+			sourceTree = "<group>";
+		};
+		641C5A6B-122A-5630-9B09-C0670D0CE2F6 /* Kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4 */ = {
+			isa = PBXGroup;
+			children = (
+				E1DC8404-3F85-5880-BFB8-37973816F620 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/G4.c.h */,
+				C8499B43-93AB-5857-BD14-8BD277808523 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/G4.h */,
+				7EE6E734-0875-5577-83A3-B8DA5E1BF767 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/g4ong5unit.c */,
+				B2ACBBBE-5AE0-5E80-A3D0-0FE08D29F018 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/graphics.h */,
+				2CCB1456-7D85-53FE-8AD2-D8AA2FE52345 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/indexbuffer.c.h */,
+				34EA267A-0BBA-52EC-8DDE-7FA3B22DE06D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/indexbuffer.h */,
+				CDC6B67B-CC70-52CC-94B2-8D137AC58F6D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/pipeline.c.h */,
+				55BFF6CD-3687-55F4-A3D9-389A6AD8F1EF /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/pipeline.h */,
+				1FAD9887-24B4-5505-9641-BF16D1FCF2C9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/rendertarget.c.h */,
+				E3054774-7EED-5654-AFDD-A8A4FA63D1ED /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/rendertarget.h */,
+				51DF166A-6646-52DD-BB5C-140470BDC213 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/shader.c.h */,
+				F990B598-5FCE-5B76-9CA1-67EAA445B7D5 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/shader.h */,
+				4BF7C8FE-F547-5FCD-906A-31520B30B76D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/texture.c.h */,
+				990F7E63-E9D0-5C88-B2C9-C7D9B7381260 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/texture.h */,
+				ABC4C608-81AC-57F3-9306-15A87F445701 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/texturearray.c.h */,
+				ED4FB944-4AAC-5F44-803D-FB16DCECC099 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/texturearray.h */,
+				C4DDAA6A-FDA1-514C-BECE-21C6D43BBBA4 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/vertexbuffer.c.h */,
+				1EA96152-BD65-5355-9D1E-5FC15FFD8ED8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4/vertexbuffer.h */,
+			);
+			name = "graphics4";
+			sourceTree = "<group>";
+		};
+		FFA15F22-F7E4-59FB-AC4A-236E19BC8720 /* Kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend */ = {
+			isa = PBXGroup;
+			children = (
+				641C5A6B-122A-5630-9B09-C0670D0CE2F6 /* Kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend/graphics4 */,
+			);
+			name = "backend";
+			sourceTree = "<group>";
+		};
+		C3C96628-0AB4-5DE8-AA60-CB4828940E37 /* Kinc/Backends/Graphics4/G4onG5/Sources/kinc */ = {
+			isa = PBXGroup;
+			children = (
+				FFA15F22-F7E4-59FB-AC4A-236E19BC8720 /* Kinc/Backends/Graphics4/G4onG5/Sources/kinc/backend */,
+			);
+			name = "kinc";
+			sourceTree = "<group>";
+		};
+		659907D7-D483-5891-A7B5-78EFD82E6410 /* Kinc/Backends/Graphics4/G4onG5/Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C3C96628-0AB4-5DE8-AA60-CB4828940E37 /* Kinc/Backends/Graphics4/G4onG5/Sources/kinc */,
+			);
+			name = "Sources";
+			sourceTree = "<group>";
+		};
+		04253E0D-C69B-5610-9682-D3F62744C7C3 /* Kinc/Backends/Graphics4/G4onG5 */ = {
+			isa = PBXGroup;
+			children = (
+				659907D7-D483-5891-A7B5-78EFD82E6410 /* Kinc/Backends/Graphics4/G4onG5/Sources */,
+			);
+			name = "G4onG5";
+			sourceTree = "<group>";
+		};
+		BE73B5AD-386E-5F44-B1D0-80B38C0016EA /* Kinc/Backends/Graphics4 */ = {
+			isa = PBXGroup;
+			children = (
+				04253E0D-C69B-5610-9682-D3F62744C7C3 /* Kinc/Backends/Graphics4/G4onG5 */,
+			);
+			name = "Graphics4";
+			sourceTree = "<group>";
+		};
+		781C110D-8221-5589-8E1A-BE6BAEC44538 /* Kinc/Backends */ = {
+			isa = PBXGroup;
+			children = (
+				BE73B5AD-386E-5F44-B1D0-80B38C0016EA /* Kinc/Backends/Graphics4 */,
+				4597EE2F-77C9-572B-9831-090AFA2E8747 /* Kinc/Backends/Graphics5 */,
+				E4AC9E8D-E068-5D2D-ADDF-7785F2F6AAF1 /* Kinc/Backends/System */,
+			);
+			name = "Backends";
+			sourceTree = "<group>";
+		};
+		24C69AB1-AAF0-51E6-8E5F-D20EF558C10E /* Kinc */ = {
+			isa = PBXGroup;
+			children = (
+				781C110D-8221-5589-8E1A-BE6BAEC44538 /* Kinc/Backends */,
+				05AD001C-4C1B-5CA1-87D3-B5C564BA4956 /* Kinc/Sources */,
+			);
+			path = ../;
+			name = "Kinc";
+			sourceTree = "<group>";
+		};
+		2904A3DB-1C68-5F56-972F-5C9731AF2B5A /* Kinc/Backends/Graphics5/Metal/Sources/kinc/backend */ = {
+			isa = PBXGroup;
+			children = (
+				58400F92-8035-556E-94E8-F82AD0DE687A /* Kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5 */,
+				4158EFFA-4044-5686-B197-F8CDF8C8DFB0 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/compute.h */,
+				3A83D62F-A79C-5312-81DF-6611FCD4505B /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/compute.m */,
+			);
+			name = "backend";
+			sourceTree = "<group>";
+		};
+		80C09403-76CD-5235-A0F9-A56C6D2E0DF8 /* Kinc/Backends/Graphics5/Metal/Sources/kinc */ = {
+			isa = PBXGroup;
+			children = (
+				2904A3DB-1C68-5F56-972F-5C9731AF2B5A /* Kinc/Backends/Graphics5/Metal/Sources/kinc/backend */,
+			);
+			name = "kinc";
+			sourceTree = "<group>";
+		};
+		8F4CD049-F9CF-578A-89B6-2712E874D119 /* Kinc/Backends/Graphics5/Metal/Sources */ = {
+			isa = PBXGroup;
+			children = (
+				80C09403-76CD-5235-A0F9-A56C6D2E0DF8 /* Kinc/Backends/Graphics5/Metal/Sources/kinc */,
+			);
+			name = "Sources";
+			sourceTree = "<group>";
+		};
+		64AF5DAD-8A35-56EF-844D-DDC9A7B805FE /* Kinc/Backends/Graphics5/Metal */ = {
+			isa = PBXGroup;
+			children = (
+				8F4CD049-F9CF-578A-89B6-2712E874D119 /* Kinc/Backends/Graphics5/Metal/Sources */,
+			);
+			name = "Metal";
+			sourceTree = "<group>";
+		};
+		4597EE2F-77C9-572B-9831-090AFA2E8747 /* Kinc/Backends/Graphics5 */ = {
+			isa = PBXGroup;
+			children = (
+				64AF5DAD-8A35-56EF-844D-DDC9A7B805FE /* Kinc/Backends/Graphics5/Metal */,
+			);
+			name = "Graphics5";
+			sourceTree = "<group>";
+		};
+		58400F92-8035-556E-94E8-F82AD0DE687A /* Kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5 */ = {
+			isa = PBXGroup;
+			children = (
+				3FF31F7D-13E7-571D-A04A-67E58422D293 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/Metal.h */,
+				5D59348A-3B4A-587D-B9B3-D6EB6AD93653 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/Metal.m.h */,
+				0D40C058-DD89-56C5-B279-F76B3F0DA1E9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/commandlist.h */,
+				74F1EEF9-8F45-5CB1-8F24-904B6467B856 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/commandlist.m.h */,
+				7D4B5583-B0C0-538B-8123-7CDD9CFC0A0E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/constantbuffer.h */,
+				D2688E8A-EDE8-57F7-8722-87340A68BDB4 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/constantbuffer.m.h */,
+				95B6C6A3-A9FF-5029-97B8-A7AA5C260E0C /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/graphics.h */,
+				0FCF247B-BA2F-55B8-89C3-D32FE47C6115 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/indexbuffer.h */,
+				E391357C-8AB3-586B-81E9-C6B7F182F188 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/indexbuffer.m.h */,
+				715CC507-3515-589D-88A1-B3BFC2F0855E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/metalunit.m */,
+				0B06C0E1-E72A-5945-A7A8-ADD0923E9FEA /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/pipeline.h */,
+				B5C8BFB5-6CA6-5478-9232-232781D3EB93 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/pipeline.m.h */,
+				71E403F3-EEF6-51C1-96C5-B926093B5795 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/rendertarget.h */,
+				50A14B8C-996E-50D0-801F-BE894801C282 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/rendertarget.m.h */,
+				C5ECF2D9-B246-5E88-9E1E-6EACBE78E53B /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/shader.h */,
+				AA81E18D-987C-5690-B3F1-0A4DB4AA5EB2 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/shader.m.h */,
+				EF9B31B2-6F2C-5EB9-8996-F368A523E4B7 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/texture.h */,
+				9EC62F8C-7179-5C4E-8974-61CDA09AA25D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/texture.m.h */,
+				746D9696-931E-540F-96EC-1CE7DC454E31 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/vertexbuffer.h */,
+				FEDF0FCA-DFB2-5A31-9E4F-9DF39A81FA08 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources/kinc/backend/graphics5/vertexbuffer.m.h */,
+			);
+			name = "graphics5";
+			sourceTree = "<group>";
+		};
+		D2D362D2-413C-51E3-8CAE-CA8287FD82C0 /* Kinc/Backends/System/Apple/Sources/kinc/backend */ = {
+			isa = PBXGroup;
+			children = (
+				2F873C07-6CB3-57E8-9A20-61D05AE8455D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/appleunit.m */,
+				93264F58-7E01-50BD-88A0-BAA5F9A41BA1 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/http.m.h */,
+				890E153C-FE4C-50AE-8BFD-53FFD410538D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/thread.m.h */,
+				DB3AC957-6079-5F7A-BA02-48E9E4CEAE76 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/video.h */,
+				C2E4317B-FA51-59E5-8FEF-66984767D937 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources/kinc/backend/video.m.h */,
+			);
+			name = "backend";
+			sourceTree = "<group>";
+		};
+		34D14887-1127-55D2-A063-170A68B1CD81 /* Kinc/Backends/System/Apple/Sources/kinc */ = {
+			isa = PBXGroup;
+			children = (
+				D2D362D2-413C-51E3-8CAE-CA8287FD82C0 /* Kinc/Backends/System/Apple/Sources/kinc/backend */,
+			);
+			name = "kinc";
+			sourceTree = "<group>";
+		};
+		CBA1B341-F358-5D56-BD2A-8AEDB00B2163 /* Kinc/Backends/System/Apple/Sources */ = {
+			isa = PBXGroup;
+			children = (
+				34D14887-1127-55D2-A063-170A68B1CD81 /* Kinc/Backends/System/Apple/Sources/kinc */,
+			);
+			name = "Sources";
+			sourceTree = "<group>";
+		};
+		4DABCE20-C695-503E-A6A8-DDB16A854D21 /* Kinc/Backends/System/Apple */ = {
+			isa = PBXGroup;
+			children = (
+				CBA1B341-F358-5D56-BD2A-8AEDB00B2163 /* Kinc/Backends/System/Apple/Sources */,
+			);
+			name = "Apple";
+			sourceTree = "<group>";
+		};
+		E4AC9E8D-E068-5D2D-ADDF-7785F2F6AAF1 /* Kinc/Backends/System */ = {
+			isa = PBXGroup;
+			children = (
+				4DABCE20-C695-503E-A6A8-DDB16A854D21 /* Kinc/Backends/System/Apple */,
+				CDA3AD82-B2C9-5CD2-A733-17CB3F792248 /* Kinc/Backends/System/POSIX */,
+				A0029A17-EADF-5D92-B9C7-C63F54390361 /* Kinc/Backends/System/macOS */,
+			);
+			name = "System";
+			sourceTree = "<group>";
+		};
+		79180ECC-EDF8-51CC-8CE0-1B292ABB843A /* Kinc/Backends/System/POSIX/Sources/kinc/backend */ = {
+			isa = PBXGroup;
+			children = (
+				845DA431-35E7-50BD-B482-DA6CE6E305B2 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/atomic.h */,
+				79F6140E-374D-519E-A12C-52E2B8377B6C /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/event.c.h */,
+				80C7A990-8198-5ECF-8A6A-D843DE2FABA7 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/event.h */,
+				5C810D76-19DC-580B-A4B9-FAC40758798F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/mutex.c.h */,
+				1834C4E5-C093-5BBD-B7CB-5463E61DD691 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/mutex.h */,
+				ACDA02C9-DA52-59DD-9DD0-F2EDB5149F22 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/posixunit.c */,
+				4CFD1BFE-49E1-543A-9701-2A36CAA9B4A8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/semaphore.c.h */,
+				A90F8C4A-B086-5318-A901-FE839B41173C /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/semaphore.h */,
+				B3A5D22A-E50D-5834-96EF-2F3CD7176453 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/thread.c.h */,
+				CFFF22B4-EB45-57F6-A04F-DCF8446D4037 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/thread.h */,
+				1CB41CD3-31CD-5CB6-940B-514650EE6DFF /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/threadlocal.c.h */,
+				706E7283-DD8B-500B-8FD3-72FC9474E16D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources/kinc/backend/threadlocal.h */,
+			);
+			name = "backend";
+			sourceTree = "<group>";
+		};
+		B0C2993D-DD3B-5FF5-9120-3C0335C29F21 /* Kinc/Backends/System/POSIX/Sources/kinc */ = {
+			isa = PBXGroup;
+			children = (
+				79180ECC-EDF8-51CC-8CE0-1B292ABB843A /* Kinc/Backends/System/POSIX/Sources/kinc/backend */,
+			);
+			name = "kinc";
+			sourceTree = "<group>";
+		};
+		DF887FBF-BD9B-5898-933A-75674485C21D /* Kinc/Backends/System/POSIX/Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B0C2993D-DD3B-5FF5-9120-3C0335C29F21 /* Kinc/Backends/System/POSIX/Sources/kinc */,
+			);
+			name = "Sources";
+			sourceTree = "<group>";
+		};
+		CDA3AD82-B2C9-5CD2-A733-17CB3F792248 /* Kinc/Backends/System/POSIX */ = {
+			isa = PBXGroup;
+			children = (
+				DF887FBF-BD9B-5898-933A-75674485C21D /* Kinc/Backends/System/POSIX/Sources */,
+			);
+			name = "POSIX";
+			sourceTree = "<group>";
+		};
+		B4CA2EC5-91C6-5520-A654-E3143E90E8C0 /* Kinc/Backends/System/macOS/Sources/kinc/backend */ = {
+			isa = PBXGroup;
+			children = (
+				7B143E25-72A2-564D-86DC-975C7E606F07 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/BasicOpenGLView.h */,
+				28034AD8-1F68-5FF7-AD7D-524F1DFE7500 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/BasicOpenGLView.m.h */,
+				B561FBBD-D5EE-55BA-A8F2-4DE718136182 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/HIDGamepad.c.h */,
+				6CBAC08F-6738-5CE5-A8FC-350C9BE2EB44 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/HIDGamepad.h */,
+				FAA1D169-2067-56C8-BCE3-C6328E92F4C4 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/HIDManager.c.h */,
+				DB7DCE61-A725-528B-B959-A6B2BF64ABF2 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/HIDManager.h */,
+				DDEA7ABF-CE46-54F2-A2F8-C164FCB65296 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/audio.c.h */,
+				25D5E3A2-2762-5911-83CD-95D9AEEBA93E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/display.m.h */,
+				E087BA6A-8441-5E86-BE64-877209B2CDDA /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/displaydata.h */,
+				687046BA-52AC-525F-986F-E47BA5AF35EB /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/mac.plist */,
+				830ADE28-227E-5793-A596-FC561EE4654F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/macosunit.m */,
+				9CCB5134-A889-5CE2-9EB9-34AC3B180A6E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/mouse.m.h */,
+				F4D9721A-842A-587C-880C-649E03755032 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/system.c.h */,
+				7E27A706-D173-5C05-BC64-EE1DE20F9D4E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/system.m.h */,
+				CE5D6E13-104F-5E5C-BC67-4C21AE03CE11 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/window.c.h */,
+				7E5C54DE-DEF9-5338-9FD4-7EB084104FA7 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/windowdata.h */,
+			);
+			name = "backend";
+			sourceTree = "<group>";
+		};
+		CE50C30E-7789-5B23-87E9-4F5A71B1A64E /* Kinc/Backends/System/macOS/Sources/kinc */ = {
+			isa = PBXGroup;
+			children = (
+				B4CA2EC5-91C6-5520-A654-E3143E90E8C0 /* Kinc/Backends/System/macOS/Sources/kinc/backend */,
+			);
+			name = "kinc";
+			sourceTree = "<group>";
+		};
+		CD58F829-2F67-522D-A445-A9D305EFC72D /* Kinc/Backends/System/macOS/Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CE50C30E-7789-5B23-87E9-4F5A71B1A64E /* Kinc/Backends/System/macOS/Sources/kinc */,
+			);
+			name = "Sources";
+			sourceTree = "<group>";
+		};
+		A0029A17-EADF-5D92-B9C7-C63F54390361 /* Kinc/Backends/System/macOS */ = {
+			isa = PBXGroup;
+			children = (
+				CD58F829-2F67-522D-A445-A9D305EFC72D /* Kinc/Backends/System/macOS/Sources */,
+			);
+			name = "macOS";
+			sourceTree = "<group>";
+		};
+		69AD240E-5C18-54FC-96F1-DA1E3739A1C8 /* Kinc/Sources/Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				8053A12D-1499-5406-8070-94A88B7666DA /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/g1.frag.glsl */,
+				BC294388-9D10-5987-A1A0-D3278F2C472F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/g1.vert.glsl */,
+				82A69CDD-C30A-58FD-BDFD-D5C41E116D6C /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-colored.frag.glsl */,
+				16F9B45A-1D7C-58E2-8288-A7C4885B9976 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-colored.vert.glsl */,
+				FB49AB22-C09A-5B5A-86FB-766F9D5ACD20 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-image.frag.glsl */,
+				1C5744C7-7AF4-564E-A3EC-724BE03509C6 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-image.vert.glsl */,
+				B38AEACB-DC87-5538-905F-16FE678478E2 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-text.frag.glsl */,
+				CCDE637C-CE2E-5997-B567-1411B9E29D48 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-text.vert.glsl */,
+				02634824-08E0-5730-A1D4-7FC7EBFC8328 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-video.frag.glsl */,
+				8307B9C0-C499-559C-90FD-7C5E0721AAFC /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/Shaders/painter-video.vert.glsl */,
+			);
+			name = "Shaders";
+			sourceTree = "<group>";
+		};
+		05AD001C-4C1B-5CA1-87D3-B5C564BA4956 /* Kinc/Sources */ = {
+			isa = PBXGroup;
+			children = (
+				69AD240E-5C18-54FC-96F1-DA1E3739A1C8 /* Kinc/Sources/Shaders */,
+				750F1A65-4E49-5095-ADF0-93455C0627FF /* Kinc/Sources/kinc */,
+			);
+			name = "Sources";
+			sourceTree = "<group>";
+		};
+		750F1A65-4E49-5095-ADF0-93455C0627FF /* Kinc/Sources/kinc */ = {
+			isa = PBXGroup;
+			children = (
+				4E265AC3-FAAF-5AF2-9C7A-32DC1F670C57 /* Kinc/Sources/kinc/audio1 */,
+				6894071C-43D0-5D63-8CD6-5E5E32614260 /* Kinc/Sources/kinc/audio2 */,
+				F6629882-D1A4-5476-AB1D-C8B0B3B401A1 /* Kinc/Sources/kinc/compute */,
+				6659B347-0B68-51D5-AAA0-4D193C123319 /* Kinc/Sources/kinc/graphics1 */,
+				CB353458-4D28-5FA4-BA76-1F32BAC1723C /* Kinc/Sources/kinc/graphics2 */,
+				C8DA327D-6A8F-5EDD-95E4-42535C3AE12B /* Kinc/Sources/kinc/graphics4 */,
+				219F857A-E9D4-503F-BF1F-A38A9AE05C56 /* Kinc/Sources/kinc/graphics5 */,
+				79316E8D-027F-5324-A6C0-F3E81A910211 /* Kinc/Sources/kinc/input */,
+				BFB04243-7CF9-516B-AD9D-6D9D0873CCCB /* Kinc/Sources/kinc/io */,
+				54AA3ED8-2508-5B6E-A7B7-B922340574D5 /* Kinc/Sources/kinc/libs */,
+				643E70D6-DF5B-5A1B-921D-ED1B3793EF71 /* Kinc/Sources/kinc/math */,
+				F622DC9B-29BC-5262-871D-67DA9DC9AC05 /* Kinc/Sources/kinc/network */,
+				D1A229B0-95EC-507B-972F-DB52B1610289 /* Kinc/Sources/kinc/simd */,
+				28D8F944-83EF-5F1E-82A2-53CBD3F2BB35 /* Kinc/Sources/kinc/threads */,
+				0B1B5CF3-3328-5945-874D-18043590CD44 /* Kinc/Sources/kinc/vr */,
+				2EA9A113-4DE6-5548-89DA-438E7E0736EE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/color.c.h */,
+				8C814237-CFEE-5AA5-A3A1-B55E684267CE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/color.h */,
+				177D1587-6FA2-5A8E-A736-88435AD21E5B /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/display.h */,
+				D80AC8BD-937F-5111-8056-033791FB99F3 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/error.c.h */,
+				E8DD90E0-4C0A-58B3-8035-C6643DB612C9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/error.h */,
+				734E8A75-F47A-54FD-B7B1-3363B9AB174D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/global.h */,
+				E94305D6-4EBE-5D8A-8B31-F15735B1651D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/image.c.h */,
+				76A830CC-A466-5685-8D71-8E1728E5AFBA /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/image.h */,
+				0CA7C4D1-272D-59BC-B24B-65C235860C35 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/log.c.h */,
+				7B4F79FC-47B6-5DBD-BE29-D4DC38C084BC /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/log.h */,
+				FC983B99-954A-50D2-A8C8-08BCA10262C7 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/pch.h */,
+				4CBE9584-2410-58AA-AA12-EC806C47B452 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/rootunit.c */,
+				97312542-0F75-5CDE-946D-D834D6640246 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/system.c.h */,
+				EF555358-7CB7-59FE-BCD9-35E283CC19B3 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/system.h */,
+				87D4D6A1-5AC0-5464-98CD-4F06A0E97F52 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/video.h */,
+				8D8852A4-3581-5BB9-B418-8E4C9E701E76 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/window.c.h */,
+				B3F24885-5A1E-5851-817A-29732806C713 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/window.h */,
+			);
+			name = "kinc";
+			sourceTree = "<group>";
+		};
+		4E265AC3-FAAF-5AF2-9C7A-32DC1F670C57 /* Kinc/Sources/kinc/audio1 */ = {
+			isa = PBXGroup;
+			children = (
+				B4E82CBA-CA4B-5779-A57A-1EC46B75B4AE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/a1unit.c */,
+				DA63FFF0-B9C4-514F-8811-FB373F6F49CB /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/audio.c.h */,
+				08CA3C0E-D5AC-51D0-9882-A75CE02AC290 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/audio.h */,
+				CB4CD968-188B-55B5-9E0E-90F6894056DD /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/sound.c.h */,
+				7DD0BEED-7468-58F1-8372-71B64FE6FCDF /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/sound.h */,
+				4B2336CD-5B59-509E-B29B-5F9AFD190D47 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/soundstream.c.h */,
+				728FAAF9-78F6-5634-84F3-8BE111F4ADBE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/soundstream.h */,
+				593A9493-163F-5BF1-92A8-A8DA66CE1F46 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio1/stb_vorbis.c */,
+			);
+			name = "audio1";
+			sourceTree = "<group>";
+		};
+		6894071C-43D0-5D63-8CD6-5E5E32614260 /* Kinc/Sources/kinc/audio2 */ = {
+			isa = PBXGroup;
+			children = (
+				FD9F443A-23BB-5C40-8F95-C1DEF5F7CB4D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio2/audio.c */,
+				76EDA67C-0FD4-52D4-B499-71A3436BB217 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/audio2/audio.h */,
+			);
+			name = "audio2";
+			sourceTree = "<group>";
+		};
+		F6629882-D1A4-5476-AB1D-C8B0B3B401A1 /* Kinc/Sources/kinc/compute */ = {
+			isa = PBXGroup;
+			children = (
+				11AE5DAC-17D0-59B9-BE2D-5A711CB08BB0 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/compute/compute.h */,
+			);
+			name = "compute";
+			sourceTree = "<group>";
+		};
+		6659B347-0B68-51D5-AAA0-4D193C123319 /* Kinc/Sources/kinc/graphics1 */ = {
+			isa = PBXGroup;
+			children = (
+				FB8F2FF4-58E7-5E9D-B803-D1516CE9803D /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics1/graphics.c */,
+				FF0A6FED-A580-5564-81AC-7FF6214A2D5F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics1/graphics.h */,
+			);
+			name = "graphics1";
+			sourceTree = "<group>";
+		};
+		CB353458-4D28-5FA4-BA76-1F32BAC1723C /* Kinc/Sources/kinc/graphics2 */ = {
+			isa = PBXGroup;
+			children = (
+				FF183A23-F2EB-5446-92A2-1AE29D8346D8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics.h */,
+				68221B85-4715-5463-B4A3-48F8EBA37AB3 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics_kore.cpp */,
+				912553F3-E642-5B90-A87A-8F29028F6159 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics2/graphics_soft.c */,
+			);
+			name = "graphics2";
+			sourceTree = "<group>";
+		};
+		C8DA327D-6A8F-5EDD-95E4-42535C3AE12B /* Kinc/Sources/kinc/graphics4 */ = {
+			isa = PBXGroup;
+			children = (
+				8D03627F-CD8E-5EE3-BBB1-9ACF9F91EC89 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/constantlocation.h */,
+				6A5A93BB-1DAD-5344-BC44-D42C737878A8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/g4unit.c */,
+				64717DE7-BFD6-5D5A-A402-728778F94EA8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/graphics.c.h */,
+				BF8FCF0A-7F59-55E9-9B63-BC085A513DBE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/graphics.h */,
+				574C8451-CC2B-5A6E-B895-9979C2A30580 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/indexbuffer.h */,
+				63D509B6-A661-5558-B9F6-C37B9C005309 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/pipeline.c.h */,
+				F8DC65B8-4A6A-5280-A38C-C3658A619B33 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/pipeline.h */,
+				E31DB0C5-38AB-537E-9C2B-54E356EE2253 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/rendertarget.h */,
+				C618790B-9BA2-5A03-BFFF-69AC8E18A944 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/shader.h */,
+				BC216E3B-90C7-52CB-9C20-10B278E78930 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/texture.h */,
+				9A3F3AAB-EE67-5160-A43D-9C46CF882B79 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/texturearray.h */,
+				7D609BB3-F406-5E02-95E2-2BD49D898999 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/textureunit.h */,
+				72638045-8E10-5FC9-B2BC-543058180B2E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/usage.h */,
+				474037B9-784A-5684-9CAC-0BFD3FD7920A /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/vertexbuffer.c.h */,
+				77B9E3FE-1303-5538-A932-E1FF010174E9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/vertexbuffer.h */,
+				26487E8F-1A80-580C-9CB4-636D32B1BABB /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics4/vertexstructure.h */,
+			);
+			name = "graphics4";
+			sourceTree = "<group>";
+		};
+		219F857A-E9D4-503F-BF1F-A38A9AE05C56 /* Kinc/Sources/kinc/graphics5 */ = {
+			isa = PBXGroup;
+			children = (
+				5B8F9435-2779-50B9-809A-373021EC9EFE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/commandlist.c.h */,
+				DAD471E7-A96E-5ABE-9B84-817E2A71179F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/commandlist.h */,
+				D0C3B2C2-8EA4-5A56-A249-546CB5C7E969 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/compute.h */,
+				B9BC6194-5A60-56E0-B87F-54DE5B597668 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/constantbuffer.c.h */,
+				3EEDC32D-BECC-533D-BD7E-C0F7F82A1C24 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/constantbuffer.h */,
+				1A7BCF7D-BC24-5552-85A4-F1FBB236C871 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/constantlocation.h */,
+				3A96BD0E-DCB1-5D4F-9057-45FBBE8EDE49 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/g5unit.c */,
+				A1B05A50-1841-5A34-8482-BB8E53BB419E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/graphics.c.h */,
+				C1E8460D-418D-50B9-88E7-B3A3BD4B81CE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/graphics.h */,
+				3E178B88-12C0-5BF0-924B-68C0BF1EE2B6 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/indexbuffer.h */,
+				4003EBC4-A321-5563-A45F-75D9FCF22BAE /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/pipeline.c.h */,
+				A30A1736-09B9-5E6D-967B-9504ED33B59A /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/pipeline.h */,
+				92D74CD7-6C15-5E2D-9593-0C19CA1BE182 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/raytrace.h */,
+				8042D97F-31FC-598B-93F9-20479448143E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/rendertarget.h */,
+				59C197B9-CC7B-5693-B2EE-9B8A0BF00827 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/shader.h */,
+				EE03134D-1167-589C-A011-BF0BC0645FF5 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/texture.c.h */,
+				99922E44-5F56-5491-9D8B-58B7C9AC21D0 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/texture.h */,
+				6C0B9978-789D-5330-9D4A-3D18F6CA7193 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/textureunit.h */,
+				AC601B72-B780-585D-9397-6613D4A64C0E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/vertexbuffer.h */,
+				D37BABAF-CD83-5CC9-9A42-5325163F23A9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/graphics5/vertexstructure.h */,
+			);
+			name = "graphics5";
+			sourceTree = "<group>";
+		};
+		79316E8D-027F-5324-A6C0-F3E81A910211 /* Kinc/Sources/kinc/input */ = {
+			isa = PBXGroup;
+			children = (
+				1CD95584-451E-5E37-87FE-EFD46B9A555E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/acceleration.c.h */,
+				CCF39FAF-28F3-59ED-89A5-4F154FE21EAC /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/acceleration.h */,
+				FC499397-8938-55A9-A4DF-37DE406463AC /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/gamepad.c.h */,
+				9616B56E-51DC-5E7C-A3BF-BF1925475E3B /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/gamepad.h */,
+				AFE41486-AFD4-5E24-9112-BEA308DAE107 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/inputunit.c */,
+				C1723FA9-7F3D-56DF-BD88-2C1381374D3F /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/keyboard.c.h */,
+				7FD4DFB3-DDEA-542E-B0B9-2AB29EC22605 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/keyboard.h */,
+				54AB498A-C53A-5891-A519-E5F38E64F7D3 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/mouse.c.h */,
+				4C315C8D-0838-5656-9DB5-9C40F3737573 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/mouse.h */,
+				BFAAA610-62A8-593C-BB84-7E90AD8C7273 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/pen.c.h */,
+				5625604F-AE77-54AC-91BF-8F231FFB3672 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/pen.h */,
+				8C1747A9-36A2-5299-8777-E39810855F6E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/rotation.c.h */,
+				B2066DF6-E6F3-518B-A93F-2D6685C297E5 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/rotation.h */,
+				5A0886A7-FB09-5592-9CA0-F7C898B0A72A /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/surface.c.h */,
+				26C1D5E2-9F9E-5D91-94AA-DE91D7A7D987 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/input/surface.h */,
+			);
+			name = "input";
+			sourceTree = "<group>";
+		};
+		BFB04243-7CF9-516B-AD9D-6D9D0873CCCB /* Kinc/Sources/kinc/io */ = {
+			isa = PBXGroup;
+			children = (
+				135FC34B-729A-5544-9C93-1CC6DAC2734B /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/filereader.c.h */,
+				D9AC7CB1-AF05-5FE4-96EA-A0BC8C36DFAA /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/filereader.h */,
+				C1F6123C-7A01-54A7-A6D2-D11F42A9A5D4 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/filewriter.c.h */,
+				D91E7F6C-8F33-5EA0-90A1-D7F76EEE687A /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/filewriter.h */,
+				B6C009BD-0101-5CCD-800C-89A2B0B424D5 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/io/iounit.c */,
+			);
+			name = "io";
+			sourceTree = "<group>";
+		};
+		54AA3ED8-2508-5B6E-A7B7-B922340574D5 /* Kinc/Sources/kinc/libs */ = {
+			isa = PBXGroup;
+			children = (
+				8C307800-DFF6-5BE1-BEBF-19EBD5DAE0E2 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/libs/lz4x.h */,
+				CEBAEA9C-FBC1-5159-A566-5BB11A892139 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/libs/stb_image.h */,
+			);
+			name = "libs";
+			sourceTree = "<group>";
+		};
+		643E70D6-DF5B-5A1B-921D-ED1B3793EF71 /* Kinc/Sources/kinc/math */ = {
+			isa = PBXGroup;
+			children = (
+				5AFA6BFC-4FF0-5F44-9146-0357C0F21EB8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/core.c.h */,
+				CE8F5D08-5D90-5D6B-9F27-6B278F9F1221 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/core.h */,
+				FC100BE3-0E67-5F5A-839D-A5EF84714256 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/mathunit.c */,
+				76D34552-D2A9-54DB-B9C1-4FFFB4076B43 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/matrix.c.h */,
+				69465E14-40BF-5B79-8926-43B29C312C81 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/matrix.h */,
+				108E537D-3E18-5472-BE0C-7A1C4372FB12 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/quaternion.h */,
+				FEEEC9D4-41F7-5BFA-A0C7-D4A52B0FB061 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/random.c.h */,
+				FD8FCBB8-5575-59F6-AB26-42D238BBEF0E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/random.h */,
+				B498CCAB-BE1D-510A-9C18-9C3B73697E25 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/math/vector.h */,
+			);
+			name = "math";
+			sourceTree = "<group>";
+		};
+		F622DC9B-29BC-5262-871D-67DA9DC9AC05 /* Kinc/Sources/kinc/network */ = {
+			isa = PBXGroup;
+			children = (
+				67DDEF55-5C69-5EE3-AB78-BBFF5B418087 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/http.c.h */,
+				FFF01160-4708-5CBC-960A-570155317E97 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/http.h */,
+				75EC7F67-A9A8-5D68-9DED-84EC72B9A29C /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/networkunit.c */,
+				85877148-70A9-5AD7-BBDF-E2B0770B483E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/socket.c.h */,
+				A593B092-BB57-5560-AAF9-FB1B80BB1BB8 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/network/socket.h */,
+			);
+			name = "network";
+			sourceTree = "<group>";
+		};
+		D1A229B0-95EC-507B-972F-DB52B1610289 /* Kinc/Sources/kinc/simd */ = {
+			isa = PBXGroup;
+			children = (
+				D7F8C9F7-B8E3-55F2-942C-3744436FA7C5 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/simd/float32x4.h */,
+			);
+			name = "simd";
+			sourceTree = "<group>";
+		};
+		28D8F944-83EF-5F1E-82A2-53CBD3F2BB35 /* Kinc/Sources/kinc/threads */ = {
+			isa = PBXGroup;
+			children = (
+				FA761C31-8756-55B7-98A9-86700C58F4F9 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/atomic.h */,
+				3C75C44C-3B38-55B7-9B2E-204E351594CD /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/event.h */,
+				30991617-9D77-53BA-BFA8-E91AA3EC7B00 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/fiber.h */,
+				8E505DD1-113C-500D-8047-13F741A14BE0 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/mutex.h */,
+				60C2B7E2-4B99-583D-BDAE-223F56E693C3 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/semaphore.h */,
+				9BA66D64-EA52-54C7-B172-AF2FB89A2BC1 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/thread.h */,
+				4F109560-CD0F-5641-B45B-49847874089E /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/threads/threadlocal.h */,
+			);
+			name = "threads";
+			sourceTree = "<group>";
+		};
+		0B1B5CF3-3328-5945-874D-18043590CD44 /* Kinc/Sources/kinc/vr */ = {
+			isa = PBXGroup;
+			children = (
+				1B491B8D-D82A-5BA7-B4F5-D4F969CC2380 /* /Users/urjasvisuthar/Desktop/KincProject/kinc/Sources/kinc/vr/vrinterface.h */,
+			);
+			name = "vr";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EE91D58-E4CE-501F-9650-85F99A1A2B1D /* New-Project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87D1C6A3-685F-58D8-B14E-7C19860EFB79 /* Build configuration list for PBXNativeTarget "New-Project" */;
+			buildPhases = (
+				F8F9EDAF-8456-5AE5-83F4-0FC6C317797D /* Sources */,
+				E8A81D22-F8B2-5ED0-8A93-0330D32B4516 /* Frameworks */,
+				B53A6E39-B708-56F3-8858-64229F65A8FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "New Project";
+			productName = "New Project";
+			productReference = 9137F3A1-B0FE-5708-A1F3-16C8BFD9A802 /* New-Project.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55E99366-AC0E-58EB-B9C3-360A88EBD15F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				ORGANIZATIONNAME = "the Kore Development Team";
+				TargetAttributes = {
+					4EE91D58-E4CE-501F-9650-85F99A1A2B1D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 59DFF9AD-7EAA-5C7B-8AE4-B67216A1093F /* Build configuration list for PBXProject "New-Project" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB579A34-76E1-5D5C-BBFF-4AD440369A8E;
+			productRefGroup = 4A9BB68F-D945-5666-AC14-842E130266D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EE91D58-E4CE-501F-9650-85F99A1A2B1D /* New-Project */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B53A6E39-B708-56F3-8858-64229F65A8FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF0A3AC7-CA62-55BF-A071-CFFB34B7476D /* Deployment in Resources */,
+				98C43931-F138-5B36-8EA4-6666DED310F0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8F9EDAF-8456-5AE5-83F4-0FC6C317797D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFA26A22-DC7C-5230-9969-CA8CFB5F65A3 /* " + file.toString() + " in Sources */,
+				DDEA9D93-427A-5515-9CF9-0988219427B8 /* " + file.toString() + " in Sources */,
+				062EB246-6BE2-5033-A0AA-DC32F51437A4 /* " + file.toString() + " in Sources */,
+				DEF6A8AA-C9A1-5518-89A7-E15950B34367 /* " + file.toString() + " in Sources */,
+				A8BE476E-C5A6-5A96-B6E2-4A4E333D7F2A /* " + file.toString() + " in Sources */,
+				F537135C-66A4-511C-B198-61820E11C11A /* " + file.toString() + " in Sources */,
+				44343B2B-358B-5BD6-8FA5-61C4BF69DBF6 /* " + file.toString() + " in Sources */,
+				FEBB369C-6B84-5773-A1D3-26C4122ADE76 /* " + file.toString() + " in Sources */,
+				4C518637-B9BE-525C-B5B8-F5ABC1D505CE /* " + file.toString() + " in Sources */,
+				2C405536-B155-5524-8790-7AD84CFD6B4A /* " + file.toString() + " in Sources */,
+				8B46F74F-BC20-5134-BF41-28B8386FCE40 /* " + file.toString() + " in Sources */,
+				7199DD63-FA9C-586E-8587-EEB42A5DCB92 /* " + file.toString() + " in Sources */,
+				34FE3C0F-F47B-5018-8058-E57D5A486564 /* " + file.toString() + " in Sources */,
+				5B0C5429-AB3C-5E86-A50F-1BD5C71E1129 /* " + file.toString() + " in Sources */,
+				9D7AE6DB-91F1-5E53-BB6D-654947CE1884 /* " + file.toString() + " in Sources */,
+				85D2C915-C389-5FFD-A1C7-EBDEF3EFFA45 /* " + file.toString() + " in Sources */,
+				AA507646-D3F9-5F59-9504-0DF8019CDD56 /* " + file.toString() + " in Sources */,
+				F0AB12AA-B63B-59E8-B381-46C9606A3BC5 /* " + file.toString() + " in Sources */,
+				B6DD8B2B-A6F4-5E6B-A4CD-FED459B61CE8 /* " + file.toString() + " in Sources */,
+				55618013-E487-5A01-AB1A-BDAB3455074A /* " + file.toString() + " in Sources */,
+				E77A262D-BDA5-5126-AE66-25318543590F /* " + file.toString() + " in Sources */,
+				D1740AF3-3755-59A6-8936-E209C5A4AC05 /* " + file.toString() + " in Sources */,
+				D023A16C-8AE2-5254-8F05-83F63405053A /* " + file.toString() + " in Sources */,
+				4C0DDC9D-AEEB-5B15-88CC-42B38C8AA5B5 /* " + file.toString() + " in Sources */,
+				F3D46696-67D2-57E1-AD9C-7C6051D7B9E9 /* " + file.toString() + " in Sources */,
+				7A7E73EA-92B1-5E90-B0A9-1FD7E0043B7B /* " + file.toString() + " in Sources */,
+				061B9DBB-49BE-5C05-8885-9F1CC8F2F60C /* " + file.toString() + " in Sources */,
+				DFB216DE-6CC8-5C49-AE53-17930F60CCD4 /* " + file.toString() + " in Sources */,
+				4CB58D2B-DB79-572F-BB4B-83F8C8878B46 /* " + file.toString() + " in Sources */,
+				A5B003F6-C0C8-55BB-B7E1-42C964A6F1D7 /* " + file.toString() + " in Sources */,
+				8D0158D4-21EE-54E0-9B54-06F47BC2FDC2 /* " + file.toString() + " in Sources */,
+				6226F263-C04E-5CD7-8873-CE93A95EB9B7 /* " + file.toString() + " in Sources */,
+				B20CF319-7D36-5F55-AB37-F8542E33EF09 /* " + file.toString() + " in Sources */,
+				51C78444-C08C-545C-9682-D881678094C3 /* " + file.toString() + " in Sources */,
+				A7F663A8-B338-5A70-9A8D-21EB42AD53FF /* " + file.toString() + " in Sources */,
+				2CDB8C3B-3307-5FE8-B138-5D1D1AD1DFEC /* " + file.toString() + " in Sources */,
+				31625BAF-3FF9-55F9-A743-55DDF668327D /* " + file.toString() + " in Sources */,
+			);
+runOnlyForDeploymentPostprocessing = 0;
+};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9FED51D1-7E51-580A-959E-6869526634F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					KORE_G1,
+					KORE_G2,
+					KORE_G3,
+					KORE_A1,
+					KORE_A2,
+					KORE_LZ4X,
+					KORE_MACOS,
+					KORE_METAL,
+					KORE_POSIX,
+					KORE_G4,
+					KORE_G5,
+					KORE_G4ONG5,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B452F99F-14C9-57A6-92CC-A5BC2594D2C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					KORE_G1,
+					KORE_G2,
+					KORE_G3,
+					KORE_A1,
+					KORE_A2,
+					KORE_LZ4X,
+					KORE_MACOS,
+					KORE_METAL,
+					KORE_POSIX,
+					KORE_G4,
+					KORE_G5,
+					KORE_G4ONG5,
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9F62E60A-FF20-57BD-9E50-047DD8024DE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources",
+					"/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources",
+					"/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources",
+					"/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources",
+					"/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources",
+					"/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources",
+				);
+				LIBRARY_SEARCH_PATHS = (
+				);
+				INFOPLIST_EXPAND_BUILD_SETTINGS = "YES";
+				INFOPLIST_FILE = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/mac.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.kode.$(PRODUCT_NAME:rfc1034identifier)";
+				BUNDLE_VERSION = "1.0";
+				BUILD_VERSION = "1";
+				CODE_SIGN_IDENTITY = "-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		28B76534-40AE-548F-A447-20CA5AA1D62E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"/Users/urjasvisuthar/Desktop/KincProject/kinc/Sources",
+					"/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/Apple/Sources",
+					"/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources",
+					"/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/POSIX/Sources",
+					"/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics5/Metal/Sources",
+					"/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/Graphics4/G4onG5/Sources",
+				);
+				LIBRARY_SEARCH_PATHS = (
+				);
+				INFOPLIST_EXPAND_BUILD_SETTINGS = "YES";
+				INFOPLIST_FILE = "/Users/urjasvisuthar/Desktop/KincProject/kinc/Backends/System/macOS/Sources/kinc/backend/mac.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.kode.$(PRODUCT_NAME:rfc1034identifier)";
+				BUNDLE_VERSION = "1.0";
+				BUILD_VERSION = "1";
+				CODE_SIGN_IDENTITY = "-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59DFF9AD-7EAA-5C7B-8AE4-B67216A1093F /* Build configuration list for PBXProject "New-Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FED51D1-7E51-580A-959E-6869526634F8 /* Debug */,
+				B452F99F-14C9-57A6-92CC-A5BC2594D2C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87D1C6A3-685F-58D8-B14E-7C19860EFB79 /* Build configuration list for PBXNativeTarget "New-Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F62E60A-FF20-57BD-9E50-047DD8024DE0 /* Debug */,
+				28B76534-40AE-548F-A447-20CA5AA1D62E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55E99366-AC0E-58EB-B9C3-360A88EBD15F /* Project object */;
+}

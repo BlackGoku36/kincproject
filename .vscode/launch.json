@@ -1,0 +1,14 @@
+{
+	"configurations": [
+		{
+			"name": "Kinc: Launch",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "/Users/urjasvisuthar/Desktop/KincProject/build/build/Release/New-Project.app/Contents/MacOS/New-Project",
+			"cwd": "/Users/urjasvisuthar/Desktop/KincProject/Deployment",
+			"preLaunchTask": "Kinc: Build for macOS",
+			"MIMode": "lldb"
+		}
+	],
+	"compounds": []
+}
